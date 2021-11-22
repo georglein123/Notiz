@@ -1,10 +1,10 @@
 {
   "main": {
-    "id": "f69ae192f4d1f4d5",
+    "id": "0dd57c903452ceef",
     "type": "split",
     "children": [
       {
-        "id": "1084fa4c311d6860",
+        "id": "d614a822f5fc3284",
         "type": "leaf",
         "state": {
           "type": "markdown",
@@ -86,7 +86,7 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "1084fa4c311d6860",
+  "active": "d614a822f5fc3284",
   "lastOpenFiles": [
     "工作日志.md",
     "README.md",
