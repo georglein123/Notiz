@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "工作日志.md",
+            "file": "框架.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工作日志.md",
+                "file": "框架.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,6 +88,7 @@
   },
   "active": "d614a822f5fc3284",
   "lastOpenFiles": [
+    "框架.md",
     "工作日志.md",
     "README.md",
     "未命名.md"
