@@ -4,11 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "d614a822f5fc3284",
+        "id": "3790a17612d4b905",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "框架.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -65,6 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "框架.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -82,9 +86,10 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "d614a822f5fc3284",
+  "active": "3790a17612d4b905",
   "lastOpenFiles": [
     "框架.md",
+    "处理后的文件先转成xlxs文件才能保存图标.md",
     "工作日志.md",
     "README.md",
     "未命名.md"
