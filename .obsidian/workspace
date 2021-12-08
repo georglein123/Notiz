@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "VT-4K总结报告.md",
+            "file": "框架.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "VT-4K总结报告.md",
+                "file": "框架.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,9 +88,9 @@
   },
   "active": "e2f904e674d9ea9e",
   "lastOpenFiles": [
+    "框架.md",
     "VT-4K总结报告.md",
     "日志数据分析处理步骤.md",
-    "框架.md",
     "工作日志.md",
     "README.md",
     "未命名.md"
