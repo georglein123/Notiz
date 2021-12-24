@@ -10,7 +10,8 @@
           "type": "markdown",
           "state": {
             "file": "2.5次元使用方法.md",
-            "mode": "source"
+            "mode": "source",
+            "source": false
           }
         }
       }
