@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "studymodel打印测试.md",
+            "file": "LCd.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "studymodel打印测试.md",
+                "file": "LCd.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,7 +89,8 @@
   },
   "active": "93fd807147cc2825",
   "lastOpenFiles": [
-    "studymodel打印测试.md",
+    "LCd.md",
+    "study model打印测试.md",
     "VT-4K总结报告.md",
     "2.5次元使用方法.md",
     "工作日志.md",
@@ -97,7 +98,6 @@
     "LCD浮动屏幕.md",
     "三维扫描仪使用.md",
     "年会视频.md",
-    "AC打印机竞品分析.md",
-    "chairside自动均匀性校准工艺测试操作.md"
+    "AC打印机竞品分析.md"
   ]
 }
