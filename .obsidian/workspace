@@ -4,15 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "93fd807147cc2825",
+        "id": "a65b70adb8619abb",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "LCD寻零失败解决办法.md",
-            "mode": "source",
-            "source": false
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -69,7 +65,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "LCD寻零失败解决办法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,17 +82,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "93fd807147cc2825",
+  "active": "a65b70adb8619abb",
   "lastOpenFiles": [
+    "工作日志.md",
+    "20211228工艺组周会会议纪要.md",
+    "2.5次元使用方法.md",
+    "未命名.md",
+    "三维扫描仪使用.md",
     "LCD寻零失败解决办法.md",
     "study model打印测试.md",
     "VT-4K总结报告.md",
-    "2.5次元使用方法.md",
-    "工作日志.md",
     "LCD光源、屏幕.md",
-    "LCD浮动屏幕.md",
-    "三维扫描仪使用.md",
-    "年会视频.md",
-    "AC打印机竞品分析.md"
+    "LCD浮动屏幕.md"
   ]
 }
