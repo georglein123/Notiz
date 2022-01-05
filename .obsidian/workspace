@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "ps查看灰度值.md",
+            "file": "ps查看灰度值和某个像素的坐标.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ps查看灰度值.md",
+                "file": "ps查看灰度值和某个像素的坐标.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,7 +89,7 @@
   },
   "active": "a65b70adb8619abb",
   "lastOpenFiles": [
-    "ps查看灰度值.md",
+    "ps查看灰度值和某个像素的坐标.md",
     "分割代型灰度测试.md",
     "三维扫描仪使用.md",
     "AC打印机竞品分析.md",
