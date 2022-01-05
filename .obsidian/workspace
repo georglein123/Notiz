@@ -7,8 +7,12 @@
         "id": "a65b70adb8619abb",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "study model打印测试.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -65,6 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "study model打印测试.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -84,15 +89,15 @@
   },
   "active": "a65b70adb8619abb",
   "lastOpenFiles": [
+    "study model打印测试.md",
+    "studymodel打印测试.md",
     "工作日志.md",
     "20211228工艺组周会会议纪要.md",
     "2.5次元使用方法.md",
     "未命名.md",
     "三维扫描仪使用.md",
     "LCD寻零失败解决办法.md",
-    "study model打印测试.md",
     "VT-4K总结报告.md",
-    "LCD光源、屏幕.md",
-    "LCD浮动屏幕.md"
+    "LCD光源、屏幕.md"
   ]
 }
