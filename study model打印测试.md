@@ -11,6 +11,112 @@
 
 
 
+LCD打印机配置文件中关于剥离时间和剥离力配置
+
+```c++
+[photometer]
+serialport=/dev/uart_pho
+[network]
+device=enp3s0
+[interface]
+ip=192.168.3.200
+mask=255.255.255.0
+gateway=192.168.3.1
+[comm]
+type=0
+serialport=/dev/uart_main_slave
+ip=127.0.0.1
+port=9999
+[cover_axis]
+speed = 150
+[z_axis]
+speedcoeff=4
+distancecoeff=4
+
+reset_falldistance = 0
+
+reset_speed1=9000
+reset_speed2=1250
+reset_timeout=60
+
+zero_speed1=9000
+zero_distance1=-165000
+zero_speed2=2000
+zero_distance2=-12000
+zero_speed3=50
+zero_residue_dis=100
+zero_maxforce=35
+zero_minforce=15
+zero_delaytime=3000
+zero_timeout=360
+zero_protect_dis=300
+
+zero_gingva_speed1=6500
+zero_gingva_distance1=-136500
+zero_gingva_speed2=500
+zero_gingva_distance2=-12000
+zero_gingva_speed3 = 25
+zero_gingva_residue_dis = 30
+zero_gingva_maxforce=30
+zero_gingva_minforce=20
+zero_gingva_delaytime=5000
+zero_gingva_timeout=360
+zero_gingva_protect_dis = 300
+
+segment_timeout=20 #剥离时间阈值
+
+#打印机复位时点动移动时的参数设置，防止打印机突然大幅移动
+peel_speed1=250
+peel_distance1=1200
+peel_distance2=2000000
+peel_timeout1=20
+peel_timeout2=60
+
+relative_speed=4000
+
+[consttemp]
+wavedistance=50
+wavespeed =4000
+enable = true
+
+[systemparam]
+pid_fast_temp1 = 700
+pid_keep_temp1 = 400
+pid_fast_temp2 = 200
+pid_keep_temp2 = 250
+pid_protect_temp = 1000
+
+z_axis_factor = 4
+z_max_step = 300000
+
+force_factor = 4300
+max_pressure = -150 #最大压力
+max_pull = 800  #剥离最大拉力
+max_protect_force = -200
+platform_force = -5
+zero_decel_force = -20
+
+c_max_step =200000
+c_decel_step = 54463
+c_normal_speed = 5000
+c_decel_speed = 1000
+z_emerg_delay = 600
+zero_force_err_times = 1
+
+device_id	= 1
+
+
+[lamp]
+enable = true
+
+
+[tray]
+enable = false
+
+```
+
+
+
 
 
 出错：
