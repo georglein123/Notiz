@@ -117,6 +117,14 @@ enable = false
 
 
 
+**打印机软件系统查看工艺包及删除方法**
+
+1. 进入文件系统`/home/heygears/.a2d/db`
+2. 使用软件`DB Browser for SQLite` 软件打开`hg_techbag.db`
+3. 点击“浏览数据”选项卡，在“表”的下拉列表中选择“pp”，即可查看该打印机中的工艺包
+
+
+
 
 
 出错：
