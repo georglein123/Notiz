@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "study model打印测试.md",
+            "file": "工艺包开发.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "study model打印测试.md",
+                "file": "工艺包开发.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +89,7 @@
   },
   "active": "f0103a6e5bfdd6ad",
   "lastOpenFiles": [
+    "工艺包开发.md",
     "study model打印测试.md",
     "清洗机调研.md",
     "清洗机调研.assets/image-20220117155451624.png",
@@ -97,7 +98,6 @@
     "LCd产品需求.md",
     "LCD 9.25寸6K屏全流程工艺调试.md",
     "LCD浮动屏幕.md",
-    "切片器的使用方法.md",
-    "工艺包开发.md"
+    "切片器的使用方法.md"
   ]
 }
