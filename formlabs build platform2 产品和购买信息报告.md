@@ -16,7 +16,7 @@
 
 - 官网直购 [官网产品链接：Build Platform 2 (formlabs.com)](https://formlabs.com/store/accessories/build-platform-2/)
   - 优点：直接
-  - 缺点：邮递地点**无中国大陆**，需要寻找**跨境中转物流**
+  - 缺点：邮递地点**无中国大陆**，需要寻找**跨境中转物流**、物流时间长
 
 ![image-20220120111611496](E:\文档\GitHub\Notiz\formlabs build platform2 购买信息报告.assets\image-20220120111611496.png)
 
@@ -24,7 +24,7 @@
 
 - 中国大陆经销商处购买 [经销商寻找链接：Partners: Find a Formlabs Reseller](https://formlabs.com/company/partners/)
   - 优点：时效性高
-  - 确定：不确定性高
+  - 缺点：不确定性高
 
 ![image-20220120112404000](E:\文档\GitHub\Notiz\formlabs build platform2 购买信息报告.assets\image-20220120112404000.png)
 
