@@ -214,7 +214,7 @@ enable = false
 [2022-01-13 10:24:16.239][TRACE] command: "ac102301ff000001006ca0acdc"
 [2022-01-13 10:24:16.239][INFO] clear screen
 [2022-01-13 10:24:16.249][TRACE] exe result: "35->" "COMMAND_SUCCESS"
-[2022-01-13 10:24:16.254][DEBUG] begin SyncPeel
+[2022-01-13 10:24:16.254][DEBUG] begin SyncPeel #开始剥离，成型平台粘接打印机粘在料盘中
 [2022-01-13 10:24:16.254][DEBUG] [ "LCD-925-寄存牙模-100um.ult" ] step: PrintCtrl::Peeling
 [2022-01-13 10:24:16.254][INFO] led off
 [2022-01-13 10:24:16.259][TRACE] command: "ac100118ff00000400000001d227acdc"
@@ -225,11 +225,11 @@ enable = false
 [2022-01-13 10:24:16.303][TRACE] Slave State change:  "ES-0 OPR-0 OPL-0 NP-0 ZT-0 ZB-0 ZS-0 ZR-0 ZZ-1 ZP-1 CAU-0 CAL-0 CGU-0 CGD-0 TL-1 CAE-0 ZAE-0 SP-1 TS-0 SP2-0 ST-0 PID-0"  | F- "0.62"  | lts- "1130"  | rts- "2326"  | lbs- "975"  | rbs- "1848"
 [2022-01-13 10:24:32.953][TRACE] Slave Raw Log >>{  "segMove:num 1|f 0|s 20000"  }<<
 [2022-01-13 10:24:34.232][TRACE] exe result: "ZAXIS->SEGMENTED_MOTION" "COMMAND_SUCCESS"
-[2022-01-13 10:24:34.238][DEBUG] end SyncPeel
-[2022-01-13 10:24:34.244][DEBUG] begin SyncPeel
+[2022-01-13 10:24:34.238][DEBUG] end SyncPeel #剥离结束，成型平台粘结打印件，处在最上方
+[2022-01-13 10:24:34.244][DEBUG] begin SyncPeel #成型平台粘结打印件处在最上方，准备向料盘中运动
 [2022-01-13 10:24:34.248][TRACE] command: "ac100118ff00000400000002d367acdc"
 [2022-01-13 10:24:41.924][TRACE] exe result: "ZAXIS->SEGMENTED_MOTION" "COMMAND_SUCCESS"
-[2022-01-13 10:24:41.930][DEBUG] end SyncPeel
+[2022-01-13 10:24:41.930][DEBUG] end SyncPeel #成型平台粘结打印件下压到了料盘中
 [2022-01-13 10:24:41.931][TRACE] Slave State change:  "ES-0 OPR-0 OPL-0 NP-0 ZT-0 ZB-0 ZS-1 ZR-0 ZZ-1 ZP-0 CAU-0 CAL-0 CGU-0 CGD-0 TL-1 CAE-0 ZAE-0 SP-1 TS-0 SP2-0 ST-0 PID-0"  | F- "-9.14"  | lts- "1136"  | rts- "2327"  | lbs- "975"  | rbs- "1846"
 [2022-01-13 10:24:41.936][DEBUG] [ "LCD-925-寄存牙模-100um.ult" ] step: PrintCtrl::Waiting
 [2022-01-13 10:24:41.937][INFO] Peeling result: COMMAND_SUCCESS
