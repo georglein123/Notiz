@@ -14,7 +14,7 @@
 
 #### 5.采购方式
 
-- 官网直购 [官网产品链接：Build Platform 2 (formlabs.com)](https://formlabs.com/store/accessories/build-platform-2/)
+- 方式1：官网直购 [官网产品链接：Build Platform 2 (formlabs.com)](https://formlabs.com/store/accessories/build-platform-2/)
   - 优点：直接
   - 缺点：邮递地点**无中国大陆**，需要寻找**跨境中转物流**、物流时间长
 
@@ -22,7 +22,7 @@
 
 
 
-- 中国大陆经销商处购买 [经销商寻找链接：Partners: Find a Formlabs Reseller](https://formlabs.com/company/partners/)
+- 方式2：中国大陆经销商处购买 [经销商寻找链接：Partners: Find a Formlabs Reseller](https://formlabs.com/company/partners/)
   - 优点：时效性高
   - 缺点：不确定性高
 
