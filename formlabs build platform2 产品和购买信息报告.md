@@ -25,6 +25,7 @@
 - 方式2：中国大陆经销商处购买 [经销商寻找链接：Partners: Find a Formlabs Reseller](https://formlabs.com/company/partners/)
   - 优点：时效性高
   - 缺点：不确定性高
+  - 备注：需问询经销商该产品备货状态
 
 ![image-20220120112404000](E:\文档\GitHub\Notiz\formlabs build platform2 购买信息报告.assets\image-20220120112404000.png)
 
