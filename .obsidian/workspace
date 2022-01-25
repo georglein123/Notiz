@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "绷膜料盘打印过程中打印件跑出树脂.md",
+            "file": "绷膜料盘打印过程中剥离分析.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "绷膜料盘打印过程中打印件跑出树脂.md",
+                "file": "绷膜料盘打印过程中剥离分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,8 +89,8 @@
   },
   "active": "2ea37a089fc174a2",
   "lastOpenFiles": [
-    "绷膜料盘打印过程中打印件跑出树脂.md",
     "绷膜料盘打印过程中剥离分析.md",
+    "绷膜料盘打印过程中打印件跑出树脂.md",
     "清洗机调研.md",
     "formlabs build platform2 购买信息报告.md",
     "formlabs build platform2 产品和购买信息报告.md",
