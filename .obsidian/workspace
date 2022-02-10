@@ -7,8 +7,12 @@
         "id": "2ea37a089fc174a2",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "清洗机调研.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -65,6 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "清洗机调研.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -84,15 +89,15 @@
   },
   "active": "2ea37a089fc174a2",
   "lastOpenFiles": [
+    "清洗机调研.md",
+    "产品会议.md",
     "冲牙器冲洗测试.md",
     "usmile冲牙器冲洗测试.md",
     "study model打印测试.md",
-    "清洗机调研.md",
     "清洗相关数据总结.md",
     "工作日志.md",
     "formlabs build platform2 产品和购买信息报告.md",
     "formlabs build platform2 购买信息报告.md",
-    "主方案：密闭空间内喷射清洗液清洗.md",
-    "固化机.md"
+    "主方案：密闭空间内喷射清洗液清洗.md"
   ]
 }
