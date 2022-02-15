@@ -7,8 +7,12 @@
         "id": "4703dbba369a861e",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "清洗机细化测试.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -65,6 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "清洗机细化测试.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -84,15 +89,15 @@
   },
   "active": "4703dbba369a861e",
   "lastOpenFiles": [
+    "清洗机细化测试.md",
+    "当前测试进度.md",
     "产品会议.md",
     "总结-usmile冲牙器冲洗测试.pdf",
     "usmile冲牙器冲洗测试.pdf",
     "总结-usmile冲牙器冲洗测试.md",
-    "清洗机细化测试.md",
     "打印件结构及树脂清洗测试.md",
     "喷头结构测试.md",
     "紫外固化测试.md",
-    "清洗机调研.md",
-    "冲牙器冲洗测试.md"
+    "清洗机调研.md"
   ]
 }
