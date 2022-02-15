@@ -7,7 +7,7 @@
         "id": "4703dbba369a861e",
         "type": "leaf",
         "state": {
-          "type": "empty",
+          "type": "graph",
           "state": {}
         }
       }
@@ -84,6 +84,7 @@
   },
   "active": "4703dbba369a861e",
   "lastOpenFiles": [
+    "产品会议.md",
     "总结-usmile冲牙器冲洗测试.pdf",
     "usmile冲牙器冲洗测试.pdf",
     "总结-usmile冲牙器冲洗测试.md",
@@ -92,7 +93,6 @@
     "喷头结构测试.md",
     "紫外固化测试.md",
     "清洗机调研.md",
-    "产品会议.md",
     "冲牙器冲洗测试.md"
   ]
 }
