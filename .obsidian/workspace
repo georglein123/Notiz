@@ -7,8 +7,12 @@
         "id": "0728b95c9fd32bf7",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "95%酒精紫外固化.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -65,6 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "95%酒精紫外固化.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -84,6 +89,7 @@
   },
   "active": "0728b95c9fd32bf7",
   "lastOpenFiles": [
+    "95%酒精紫外固化.md",
     "消费级清洗机技术路线内部评审会议纪要20220224.md",
     "清洗机调研.md",
     "紫外固化过滤回收整体模块测试.md",
@@ -92,7 +98,6 @@
     "产品会议.md",
     "2月 技术路线确定.md",
     "主方案：密闭空间内喷射清洗液清洗.md",
-    "LCd产品需求.md",
-    "清洗机细化测试.md"
+    "LCd产品需求.md"
   ]
 }
