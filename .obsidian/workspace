@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "0728b95c9fd32bf7",
+        "id": "4e60da1610b88cd1",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "清洗及紫外固化业务流程.md",
+            "file": "分割代型台阶问题.md",
             "mode": "source",
             "source": false
           }
@@ -40,10 +40,10 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
-                "matchingCase": false,
+                "query": "工艺包",
+                "matchingCase": true,
                 "explainSearch": false,
-                "collapseAll": false,
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "清洗及紫外固化业务流程.md",
+                "file": "分割代型台阶问题.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,17 +87,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "0728b95c9fd32bf7",
+  "active": "4e60da1610b88cd1",
   "lastOpenFiles": [
-    "清洗及紫外固化业务流程.md",
-    "过滤耗材及絮凝剂使用情况.md",
-    "消费级清洗机技术路线内部评审会议纪要20220224.md",
-    "清洗机调研.md",
-    "紫外固化过滤回收整体模块测试.md",
-    "20211228工艺组周会会议纪要.md",
-    "未命名.md",
-    "产品会议.md",
-    "2月 技术路线确定.md",
-    "主方案：密闭空间内喷射清洗液清洗.md"
+    "分割代型台阶问题.md",
+    "工艺包开发.md",
+    "4K满版实心牙模精度问题.md",
+    "magics使用方法.md",
+    "切片文件导入打印机失败.md",
+    "工艺.md",
+    "M值工艺包.md",
+    "切片器的使用方法.md",
+    "9.md",
+    "逆扫软件Geomagic verify使用方法.md"
   ]
 }
