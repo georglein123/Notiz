@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "日志backend_220121_000417.log.md",
+            "file": "ps查看灰度值和某个像素的坐标.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "日志backend_220121_000417.log.md",
+                "file": "ps查看灰度值和某个像素的坐标.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +89,15 @@
   },
   "active": "4e60da1610b88cd1",
   "lastOpenFiles": [
+    "ps查看灰度值和某个像素的坐标.md",
+    "LCD寻零失败解决办法.md",
+    "标牙逆扫三维扫描仪使用.md",
+    "LCD浮动屏幕.md",
     "日志backend_220121_000417.log.md",
     "4K满版实心牙模精度问题.md",
     "分割代型台阶问题.md",
     "工艺包开发.md",
     "magics使用方法.md",
-    "切片文件导入打印机失败.md",
-    "工艺.md",
-    "M值工艺包.md",
-    "切片器的使用方法.md",
-    "9.md"
+    "切片文件导入打印机失败.md"
   ]
 }
