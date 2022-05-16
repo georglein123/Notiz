@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "电脑上更换上位机系统.md",
+            "file": "分割代型台阶问题.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "电脑上更换上位机系统.md",
+                "file": "分割代型台阶问题.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +89,7 @@
   },
   "active": "7f4a3b8eb3770023",
   "lastOpenFiles": [
+    "分割代型台阶问题.md",
     "电脑上更换上位机系统.md",
     "4K满版实心牙模精度问题.md",
     "底板层表面质量较好原因排查及验证.md",
@@ -97,7 +98,6 @@
     "M值工艺包中等待时间和下降时间关系对打印件表面质量影响的测试验证.md",
     "更极端的满版基牙.md",
     "4KM值工艺包和现行工艺包.md",
-    "M值计算路线判断优化.md",
-    "倒杯口问题分享.md"
+    "M值计算路线判断优化.md"
   ]
 }
