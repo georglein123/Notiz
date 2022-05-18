@@ -99,7 +99,7 @@ A3D上打印出现的问题：
 
 224层：进入路线2，类似多个小基牙情况，计算的M值偏大
 
-
+![S000224_P1](E:\文档\GitHub\Notiz\A3D.assets\S000224_P1.png)
 
 ```c++
 T: 41556
@@ -169,8 +169,9 @@ M: 298.46
 [compute]greater than MThre m: 298.807
 [compute]greater than MThre m: 298.655
 [compute]greater than MThre m: 298.46
-[compute]valid items nums: 12
-[compute]M > M_thre nums: 12
+[compute]nums of M > M_thre : 12
+[compute]nums of valid items : 12,  80% of the valid items : 9.6
+[compute]nums of M > M_thre  >  80% of the valid items  
 [compute]ENTER INTO CASE2
 T: 416511
 S: 2.91761e+06
@@ -185,7 +186,7 @@ concat_M: 5703.77, M_hat: 10805.1
 
 225层：进入路线1，多个实体，计算的M值偏小
 
-
+![S000225_P1](E:\文档\GitHub\Notiz\A3D.assets\S000225_P1.png)
 
 ```c++
 T: 42119
@@ -251,8 +252,13 @@ M: 293.753
 [compute]greater than MThre m: 575.569
 [compute]greater than MThre m: 575.277
 [compute]greater than MThre m: 575.081
-[compute]valid items nums: 12
-[compute]M > M_thre nums: 8
+[compute]smaller than MThre m: 294.213
+[compute]smaller than MThre m: 293.928
+[compute]smaller than MThre m: 293.76
+[compute]smaller than MThre m: 293.753
+[compute]nums of M > M_thre : 8
+[compute]nums of valid items : 12,  80% of the valid items : 9.6
+[compute]nums of M > M_thre  <=  80% of the valid items  
 [compute]ENTER INTO CASE1
 delta 6=147.309
 delta 3=167.573
@@ -336,5 +342,28 @@ X10=0.362469
 [compute]T10=23202, S10=64011, X10=0.362469, delta10=142.397,  delta1=167.561,  delta10_1=xxx, delta1_10=xxx, M10=293.928, K10_1=0, 
 [main]S000225_P1.png, final_M(without unit)=833.711, final_M(with unit)=2.38629
 [main]well done!
+```
+
+
+
+- 打印全幅面底板进入路线1无法退出：
+
+![S000014_P1](E:\文档\GitHub\Notiz\A3D.assets\S000014_P1.png)
+
+```
+T: 2.58914e+06
+S: 4.0606e+06
+delta: 827.196
+M: 54287.2
+[collectItemParams]WARNING: valid_items=1 < topN_items=50
+[compute]top 5 m: 54287.2
+[compute]MThre: 5428.72
+[compute]greater than MThre m: 54287.2
+[compute]valid items nums: 1
+[compute]M > M_thre nums: 1
+[compute]ENTER INTO CASE1
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check: __n (which is 1) >= this->size() (which is 1)
+已放弃 (核心已转储)
 ```
 
