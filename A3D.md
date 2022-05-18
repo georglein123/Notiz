@@ -14,7 +14,8 @@ A3D
 
 A3D上打印出现的问题：
 
-- 打印全幅面4个空心标牙，最后几层M值计算为0，但是等待时间也为0（应该会进入第1段M值为0的段，等待时间也有100us）
+- 筛选截面大小阈值的设定：支撑和打印过程中实体最上面较小截面筛选
+- 支撑直径0.4mm，0.28mm
 
 ![image-20220518100033416](E:\文档\GitHub\Notiz\A3D.assets\image-20220518100033416.png)
 
@@ -65,6 +66,35 @@ A3D上打印出现的问题：
                 ]
             },
 ```
+
+单独运行第305层图片
+
+![S000305_P1](E:\文档\GitHub\Notiz\A3D.assets\S000305_P1.png)
+
+```
+[extractItemInfo]VALID_ITEM_EMPTY
+[collectItemParams]EXTRACT_ITEM_INFO_FAILED
+[compute]COLLECT_ITEM_PARAM_FAILED
+[main]COMPUTE_ERROR
+```
+
+错误信息的原因：
+
+```c++
+// check num of valid items
+    if (itemLabels.size() == 0)
+    {
+        COUT << "[" << __func__ << "]"
+             << "VALID_ITEM_EMPTY" << ENDL;
+        return VALID_ITEM_EMPTY;
+    }
+```
+
+修改筛选截面的大小阈值由$3mm^2$变成 $1mm^2$
+
+无报错
+
+
 
 
 
@@ -367,3 +397,4 @@ terminate called after throwing an instance of 'std::out_of_range'
 已放弃 (核心已转储)
 ```
 
+只有一个实体时
