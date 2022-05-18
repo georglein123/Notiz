@@ -397,4 +397,7 @@ terminate called after throwing an instance of 'std::out_of_range'
 已放弃 (核心已转储)
 ```
 
-只有一个实体时
+只有一个实体时，不会计算相对离散度等信息，所以需要设置只有1个实体的情况
+
+
+
