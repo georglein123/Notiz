@@ -6,3 +6,8 @@ Z轴补偿
 
 ![image-20220524104621041](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220524104621041.png)
 
+就会导致待打印模型右边部分尺寸比实际要大，厚度变厚。
+
+所以对所有类似模型，下方比上方大，下方比上方突出，都会使多出的部分变厚
+
+所以对于球体，也会出现这种情况
