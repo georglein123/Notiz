@@ -692,7 +692,7 @@ waittime percent: 54.74%
 
 ![S000001_P1](E:\文档\GitHub\Notiz\M值工艺包中等待时间和下降时间关系对打印件表面质量影响的测试验证.assets\S000001_P1.png)
 
-```
+```c++
 number 14
 t_up1 : (1600-0)/300 = 5.33
 t_up_remain : (18900-1600)/10000 = 1.73
@@ -708,7 +708,23 @@ sum of the time: 7.06+3.5+12.1 =  22.66
 waittime percent: 53.40%
 ```
 
+更换下降速度，增加
 
+```
+number 14
+t_up1 : (1600-0)/300 = 5.33
+t_up_remain : (18900-1600)/10000 = 1.73
+sum of the up time:  7.06
+t_down1 : (18000 - 0)/1000 = 18.0
+t_down2 : (18850 - 18000)/250 = 3.4
+t_down3 : (18850 - 18850)/500 = 0.0
+t_down4 : (18850 - 18850)/500 = 0.0
+t_down5 : (18850 - 18850)/500 = 0.0
+sum of the down time: 21.4
+waittime : 12.1
+sum of the time: 7.06+21.4+12.1 =  40.56
+waittime percent: 29.83%
+```
 
 
 
