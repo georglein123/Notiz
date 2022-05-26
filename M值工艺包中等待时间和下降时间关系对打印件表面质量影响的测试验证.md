@@ -776,3 +776,6 @@ sum of the time: 7.06+1.5+14.1 =  22.66
 waittime percent: 62.22%
 ```
 
+
+
+增加等待时间不容易掉板
