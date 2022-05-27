@@ -4,25 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "494e13be0107d0c4",
+        "id": "9005c61a0fc20695",
         "type": "leaf",
         "state": {
-          "type": "pdf",
-          "state": {
-            "file": "books/progit.pdf"
-          }
-        }
-      },
-      {
-        "id": "22b34f2564d0cc71",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "progit.md",
-            "mode": "source",
-            "source": false
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -79,7 +65,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "progit.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,10 +79,9 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
-  "active": "22b34f2564d0cc71",
+  "active": "9005c61a0fc20695",
   "lastOpenFiles": [
     "progit.md",
     "books/progit.pdf",
