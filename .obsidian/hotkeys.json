@@ -16,5 +16,14 @@
       ],
       "key": "H"
     }
+  ],
+  "obsidian-topic-linking:extract-md-from-pdfs-command": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "P"
+    }
   ]
 }
