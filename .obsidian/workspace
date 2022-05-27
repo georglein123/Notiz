@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "机器码",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -54,7 +54,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 435
+    "width": 435,
+    "collapsed": true
   },
   "right": {
     "id": "8efe416e9c387e5a",
