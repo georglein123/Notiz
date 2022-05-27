@@ -7,8 +7,10 @@
         "id": "7f4a3b8eb3770023",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "pdf",
+          "state": {
+            "file": "20220412工艺组周会会议纪要.pdf"
+          }
         }
       }
     ],
@@ -65,6 +67,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "20220412工艺组周会会议纪要.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -84,6 +87,7 @@
   },
   "active": "7f4a3b8eb3770023",
   "lastOpenFiles": [
+    "20220412工艺组周会会议纪要.pdf",
     "工艺包开发.md",
     "4K满版实心牙模精度问题.md",
     "底板层表面质量较好原因排查及验证.md",
@@ -92,7 +96,6 @@
     "底板层表面质量较好原因排查.md",
     "M值工艺包中等待时间对A2D 4K打印机打印满版全颌面实心牙模精度的影响.md",
     "M值工艺包中等待时间和下降时间关系对打印件表面质量影响的测试验证.md",
-    "更极端的满版基牙.md",
-    "4KM值工艺包和现行工艺包.md"
+    "更极端的满版基牙.md"
   ]
 }
