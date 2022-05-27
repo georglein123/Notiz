@@ -4,17 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "40270ef891711075",
-        "type": "leaf",
-        "state": {
-          "type": "pdf",
-          "state": {
-            "file": "截面识别策略产品化方案内部评审会议纪要.pdf"
-          }
-        }
-      },
-      {
-        "id": "8e458114044bdf3a",
+        "id": "b1fe21b0bba10f84",
         "type": "leaf",
         "state": {
           "type": "markdown",
@@ -97,7 +87,7 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "8e458114044bdf3a",
+  "active": "b1fe21b0bba10f84",
   "lastOpenFiles": [
     "截面识别策略产品化方案内部评审会议纪要.md",
     "截面识别策略产品化方案内部评审会议纪要.pdf",
