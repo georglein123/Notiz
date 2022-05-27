@@ -7,8 +7,12 @@
         "id": "9005c61a0fc20695",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "从github上下载obsidian插件导入obsidian.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -65,6 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "从github上下载obsidian插件导入obsidian.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -83,6 +88,7 @@
   },
   "active": "9005c61a0fc20695",
   "lastOpenFiles": [
+    "从github上下载obsidian插件导入obsidian.md",
     "progit.md",
     "books/progit.pdf",
     "截面参数提取-软件部分.md",
@@ -91,7 +97,6 @@
     "M值工艺包中等待时间和下降时间关系对打印件表面质量影响的测试验证.md",
     "截面识别策略产品化方案内部评审会议纪要.md",
     "截面识别策略产品化方案内部评审会议纪要.pdf",
-    "20220412工艺组周会会议纪要.pdf",
-    "总结-usmile冲牙器冲洗测试.pdf"
+    "20220412工艺组周会会议纪要.pdf"
   ]
 }
