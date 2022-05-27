@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "b2a1303357aa5219",
+        "id": "40270ef891711075",
         "type": "leaf",
         "state": {
           "type": "pdf",
           "state": {
-            "file": "20220412工艺组周会会议纪要.pdf"
+            "file": "截面识别策略产品化方案内部评审会议纪要.pdf"
           }
         }
       }
@@ -67,7 +67,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "20220412工艺组周会会议纪要.pdf",
+                "file": "截面识别策略产品化方案内部评审会议纪要.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -85,8 +85,9 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "b2a1303357aa5219",
+  "active": "40270ef891711075",
   "lastOpenFiles": [
+    "截面识别策略产品化方案内部评审会议纪要.pdf",
     "20220412工艺组周会会议纪要.pdf",
     "总结-usmile冲牙器冲洗测试.pdf",
     "工艺包开发.md",
@@ -95,7 +96,6 @@
     "分割代型台阶问题.md",
     "电脑上更换上位机系统.md",
     "底板层表面质量较好原因排查.md",
-    "M值工艺包中等待时间对A2D 4K打印机打印满版全颌面实心牙模精度的影响.md",
-    "M值工艺包中等待时间和下降时间关系对打印件表面质量影响的测试验证.md"
+    "M值工艺包中等待时间对A2D 4K打印机打印满版全颌面实心牙模精度的影响.md"
   ]
 }
