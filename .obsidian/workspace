@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "从github上下载obsidian插件导入obsidian.md",
+            "file": "底板层运动策略.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "从github上下载obsidian插件导入obsidian.md",
+                "file": "底板层运动策略.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -84,10 +84,12 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "active": "9005c61a0fc20695",
   "lastOpenFiles": [
+    "底板层运动策略.md",
     "从github上下载obsidian插件导入obsidian.md",
     "progit.md",
     "books/progit.pdf",
@@ -96,7 +98,6 @@
     "截面识别工艺包开发.md",
     "M值工艺包中等待时间和下降时间关系对打印件表面质量影响的测试验证.md",
     "截面识别策略产品化方案内部评审会议纪要.md",
-    "截面识别策略产品化方案内部评审会议纪要.pdf",
-    "20220412工艺组周会会议纪要.pdf"
+    "截面识别策略产品化方案内部评审会议纪要.pdf"
   ]
 }
