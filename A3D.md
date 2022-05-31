@@ -10,6 +10,10 @@ A3D
 
 ![image-20220517144829678](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220517144829678.png)
 
+传感器信息：
+
+![image-20220530140649738](E:\文档\GitHub\Notiz\A3D.assets\image-20220530140649738.png)
+
 
 
 A3D上打印出现的问题：
@@ -400,7 +404,7 @@ terminate called after throwing an instance of 'std::out_of_range'
 
 只有一个实体时，不会计算相对离散度等信息，所以需要设置只有1个实体的情况
 
-
+ 
 
 4个满版全颌面实心牙模打印时间约3h30min
 
