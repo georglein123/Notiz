@@ -437,3 +437,6 @@ terminate called after throwing an instance of 'std::out_of_range'
 	行 13331: 2022-05-30,21-24-47 546065194816  UpdatePeelParam [layer:] 531 Peel down params speed and dis: Vector{ 6000 4000 4000 4000 4000 } Vector{ -1850 -2850 -2850 -2850 -2850 } 
 ```
 
+时间精度要增加
+
+使用当地时间显示
