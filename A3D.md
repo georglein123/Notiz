@@ -408,3 +408,32 @@ terminate called after throwing an instance of 'std::out_of_range'
 
 4个满版全颌面实心牙模打印时间约3h30min
 
+检查M值准确进入每个对应M值区间，执行对应的工艺参数
+
+```c++
+行 7528: 2022-05-30,18-00-27 546065194816  UpdateWaitTime [layer:] 1 area_percent 139.32115173339844 Wait time is 9500 
+	行 7529: 2022-05-30,18-00-27 546065194816  UpdatePeelParam [layer:] 1 area_percent 139.32115173339844 Peel up params speed and dis: Vector{ 300 300 300 6000 6000 } Vector{ 1600 2400 3600 12900 12900 } 
+	行 7530: 2022-05-30,18-00-27 546065194816  UpdatePeelParam [layer:] 1 Peel down params speed and dis: Vector{ 6000 500 500 500 500 } Vector{ -12000 -12850 -12850 -12850 -12850 } 
+	行 7538: 2022-05-30,18-00-28 546065194816  UpdateWaitTime [layer:] 2 area_percent 139.32769775390625 Wait time is 9500 
+	行 7539: 2022-05-30,18-00-28 546065194816  UpdatePeelParam [layer:] 2 area_percent 139.32769775390625 Peel up params speed and dis: Vector{ 300 300 300 6000 6000 } Vector{ 1600 2400 3600 12900 12900 } 
+	行 7540: 2022-05-30,18-00-28 546065194816  UpdatePeelParam [layer:] 2 Peel down params speed and dis: Vector{ 6000 500 500 500 500 } Vector{ -12000 -12850 -12850 -12850 -12850 } 
+	行 7548: 2022-05-30,18-00-29 546065194816  UpdateWaitTime [layer:] 3 area_percent 139.32313537597656 Wait time is 9500 
+	行 7549: 2022-05-30,18-00-29 546065194816  UpdatePeelParam [layer:] 3 area_percent 139.32313537597656 Peel up params speed and dis: Vector{ 300 300 300 6000 6000 } Vector{ 1600 2400 3600 12900 12900 } 
+	行 7550: 2022-05-30,18-00-29 546065194816  UpdatePeelParam [layer:] 3 Peel down params speed and dis: Vector{ 6000 500 500 500 500 } Vector{ -12000 -12850 -12850 -12850 -12850 } 
+	行 7558: 2022-05-30,18-00-29 546065194816  UpdateWaitTime [layer:] 4 area_percent 139.35064697265625 Wait time is 9500 
+	行 7559: 2022-05-30,18-00-29 546065194816  UpdatePeelParam [layer:] 4 area_percent 139.35064697265625 Peel up params speed and dis: Vector{ 300 300 300 6000 6000 } Vector{ 1600 2400 3600 12900 12900 } 
+	行 7560: 2022-05-30,18-00-29 546065194816  UpdatePeelParam [layer:] 4 Peel down params speed and dis: Vector{ 6000 500 500 500 500 } Vector{ -12000 -12850 -12850 -12850 -12850 } 
+```
+
+```c++
+行 13307: 2022-05-30,21-24-40 546065194816  UpdateWaitTime [layer:] 529 area_percent 0 Wait time is 100 
+	行 13308: 2022-05-30,21-24-40 546065194816  UpdatePeelParam [layer:] 529 area_percent 0 Peel up params speed and dis: Vector{ 400 400 400 6000 6000 } Vector{ 150 300 450 2900 2900 } 
+	行 13309: 2022-05-30,21-24-40 546065194816  UpdatePeelParam [layer:] 529 Peel down params speed and dis: Vector{ 6000 4000 4000 4000 4000 } Vector{ -1850 -2850 -2850 -2850 -2850 } 
+	行 13318: 2022-05-30,21-24-43 546065194816  UpdateWaitTime [layer:] 530 area_percent 0 Wait time is 100 
+	行 13319: 2022-05-30,21-24-43 546065194816  UpdatePeelParam [layer:] 530 area_percent 0 Peel up params speed and dis: Vector{ 400 400 400 6000 6000 } Vector{ 150 300 450 2900 2900 } 
+	行 13320: 2022-05-30,21-24-43 546065194816  UpdatePeelParam [layer:] 530 Peel down params speed and dis: Vector{ 6000 4000 4000 4000 4000 } Vector{ -1850 -2850 -2850 -2850 -2850 } 
+	行 13329: 2022-05-30,21-24-47 546065194816  UpdateWaitTime [layer:] 531 area_percent 0 Wait time is 100 
+	行 13330: 2022-05-30,21-24-47 546065194816  UpdatePeelParam [layer:] 531 area_percent 0 Peel up params speed and dis: Vector{ 400 400 400 6000 6000 } Vector{ 150 300 450 2900 2900 } 
+	行 13331: 2022-05-30,21-24-47 546065194816  UpdatePeelParam [layer:] 531 Peel down params speed and dis: Vector{ 6000 4000 4000 4000 4000 } Vector{ -1850 -2850 -2850 -2850 -2850 } 
+```
+
