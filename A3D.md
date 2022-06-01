@@ -445,7 +445,7 @@ area_percent 换成M值 M value:
 
 ![image-20220601091951748](E:\文档\GitHub\Notiz\A3D.assets\image-20220601091951748.png)
 
-使用当地时间显示
+
 
 ```
 [2022-05-24 17:00:51.070] [TRACE] 	 |--- temp: 23.15
