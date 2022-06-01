@@ -439,10 +439,250 @@ terminate called after throwing an instance of 'std::out_of_range'
 
 
 
-时间精度要增加
+时间精度增加
 
 area_percent 换成M值 M value:
 
 ![image-20220601091951748](E:\文档\GitHub\Notiz\A3D.assets\image-20220601091951748.png)
 
 使用当地时间显示
+
+```
+[2022-05-24 17:00:51.070] [TRACE] 	 |--- temp: 23.15
+[2022-05-24 17:00:51.072] [TRACE] PublishMsgProcess 675 msgkey: "1002"
+[2022-05-24 17:00:53.854] [TRACE] - 94 - [wait][time] 30000 [wait][offset time] 0
+[2022-05-24 17:00:53.854] [TRACE]  ====== Begin Read Model  95 `th Loop ====== 
+[2022-05-24 17:00:53.854] [DEBUG] ReadModel 291
+[2022-05-24 17:00:53.854] [DEBUG] [ "圆柱46高6M值.ult" ] layer done
+[2022-05-24 17:00:53.854] [DEBUG] the buffer is not Empty
+[2022-05-24 17:00:53.854] [DEBUG] [ "圆柱46高6M值.ult" ] step: PrintCtrl::PrintStep(Preprocessing)
+[2022-05-24 17:00:53.854] [DEBUG] Read Model Parser Finished!
+[2022-05-24 17:00:53.854] [DEBUG] 
+
+
+
+
+[2022-05-24 17:00:53.854] [DEBUG] --------
+[2022-05-24 17:00:53.854] [DEBUG] - 95 - [exposure][begin]
+[2022-05-24 17:00:53.854] [DEBUG] =================================== loop  104
+[2022-05-24 17:00:53.855] [DEBUG] [ "圆柱46高6M值.ult" ] layer start: 95 / 120
+[2022-05-24 17:00:53.855] [DEBUG] 进入这里-正常取图 105
+[2022-05-24 17:00:53.855] [TRACE] [ProjectCtrl] OnExposure
+[2022-05-24 17:00:53.855] [DEBUG] [ "圆柱46高6M值.ult" ] step: PrintCtrl::PrintStep(Exposuring)
+[2022-05-24 17:00:53.855] [TRACE] Discard Led Eff:  "LE_UNCOVERED"
+[2022-05-24 17:00:53.855] [TRACE] previewImg show time is  0
+[2022-05-24 17:00:53.855] [DEBUG] Start Image Process,Layer:  105 step: 10
+[2022-05-24 17:00:53.856] [DEBUG] handle base and get ELayerImgType_Object
+[2022-05-24 17:00:53.856] [TRACE] ULT: other Layer
+[2022-05-24 17:00:53.857] [DEBUG] src_mat fixed ... 1
+[2022-05-24 17:00:53.857] [DEBUG] src_mat fixed ... 0 "/tmp/.A2DTemp/S000105_P1.png"
+[2022-05-24 17:00:53.875] [TRACE] PublishMsgProcess 675 msgkey: "1006"
+[2022-05-24 17:00:53.894] [TRACE] [ProjectCtrl] the current is: 281
+[2022-05-24 17:00:53.896] [TRACE] [Projector] LedOn
+[2022-05-24 17:00:53.896] [TRACE] [Ddp442x] setLedOnOff
+[2022-05-24 17:00:53.896] [TRACE] [Ddp442xApi] GpioOpen
+[2022-05-24 17:00:53.897] [TRACE] [Ddp442xApi] OpenWithRetry interfacenum: 2 , pre2retry: 3
+[2022-05-24 17:00:53.898] [TRACE] SetLedOnOff
+[2022-05-24 17:00:53.900] [TRACE] [ProjectorInterface] open_led success
+[2022-05-24 17:00:53.901] [DEBUG] [Projector] LedOn result: no support
+[2022-05-24 17:00:53.902] [TRACE] [ProjectCtrl] OnExposure preset time: 1500
+[2022-05-24 17:00:53.902] [DEBUG] bObjImg  true
+[2022-05-24 17:00:53.902] [DEBUG] wearhole scale  false
+[2022-05-24 17:00:53.918] [DEBUG] IsRemap 60 校准是否打开 true
+[2022-05-24 17:00:54.062] [DEBUG] ZoomIn Success to transform the image: 3854 2168 1.0036 1.0036
+[2022-05-24 17:00:54.063] [DEBUG] ShapeAdjust completed ... src_mat rows,cols 2160 3840
+[2022-05-24 17:00:54.188] [DEBUG] IsRemap 60 校准是否打开 true
+[2022-05-24 17:00:54.356] [DEBUG] ZoomIn Success to transform the image: 3854 2168 1.0036 1.0036
+[2022-05-24 17:00:54.372] [DEBUG] IsRemap 60 校准是否打开 true
+[2022-05-24 17:00:54.538] [DEBUG] ZoomIn Success to transform the image: 3854 2168 1.0036 1.0036
+[2022-05-24 17:00:54.538] [DEBUG] GetDemixMat Demix after and before image: "/tmp/.A2DTemp/S000115_P1.png" "/tmp/.A2DTemp/S000095_P1.png" 105
+[2022-05-24 17:00:54.784] [DEBUG] NotBaseLayer and DoDemix.
+[2022-05-24 17:00:55.316] [DEBUG] num of context.exposure is : 3
+[2022-05-24 17:00:55.316] [DEBUG] 第 105 张图片的曝光的时间为:
+[2022-05-24 17:00:55.317] [DEBUG] UpdateExposeParam 0:obj,1:contour,2:fill,3:support,4:preview layer of context: 105 layer of theory: 105 Type: 1 Energy: 21 ExposeTime: 0
+[2022-05-24 17:00:55.317] [DEBUG] 第 105 张图片的曝光的时间为:
+[2022-05-24 17:00:55.317] [DEBUG] UpdateExposeParam 0:obj,1:contour,2:fill,3:support,4:preview layer of context: 105 layer of theory: 105 Type: 2 Energy: 21 ExposeTime: 1500
+[2022-05-24 17:00:55.317] [DEBUG] 第 105 张图片的曝光的时间为:
+[2022-05-24 17:00:55.317] [DEBUG] UpdateExposeParam 0:obj,1:contour,2:fill,3:support,4:preview layer of context: 105 layer of theory: 105 Type: 4 Energy: 0 ExposeTime: 0
+[2022-05-24 17:00:55.317] [DEBUG] 第  105 张图片的上升距离为:isAdaptive= false 的工艺包数据：= 18900 true QVector(1600, 2400, 3600, 6900, 18900) 173.572
+[2022-05-24 17:00:55.318] [DEBUG] 第  105 层下降距离为:isAdaptive= false 的工艺包数据：= -18850
+[2022-05-24 17:00:55.318] [DEBUG] layers  105 's energy is:  21
+[2022-05-24 17:00:55.318] [DEBUG] layers  105 's current is:  281
+[2022-05-24 17:00:55.318] [DEBUG] layers  105 's energy is:  21
+[2022-05-24 17:00:55.319] [DEBUG] layers  105 's current is:  281
+[2022-05-24 17:00:55.319] [DEBUG] layers  105 's energy is:  0
+[2022-05-24 17:00:55.319] [DEBUG] layers  105 's current is:  80
+[2022-05-24 17:00:55.320] [DEBUG] context enqueue  i : 104 context object layer : 105 context show layer is  105 
+
+[2022-05-24 17:00:55.403] [TRACE] [ProjectCtrl] [exposure][time]: 1546
+[2022-05-24 17:00:55.403] [TRACE] [Projector] LedOff
+[2022-05-24 17:00:55.404] [TRACE] [Ddp442x] setLedOnOff
+[2022-05-24 17:00:55.404] [TRACE] [Ddp442xApi] GpioOpen
+[2022-05-24 17:00:55.404] [TRACE] [Ddp442xApi] OpenWithRetry interfacenum: 2 , pre2retry: 3
+[2022-05-24 17:00:55.404] [TRACE] SetLedOnOff
+[2022-05-24 17:00:55.404] [TRACE] [ProjectorInterface] close_led success
+[2022-05-24 17:00:55.404] [DEBUG] [Projector] LedOff result: no support
+[2022-05-24 17:00:55.450] [TRACE] OnEnviromentCheck 57 data: QMap(("Projector", QVariant(bool, true))("Screen", QVariant(bool, true)))
+[2022-05-24 17:00:55.451] [TRACE] - 95 - [exposure][time] 1595 [exposure][offset time] 95
+[2022-05-24 17:00:55.451] [DEBUG] begin SyncPeel
+[2022-05-24 17:00:55.453] [DEBUG] [ "圆柱46高6M值.ult" ] step: PrintCtrl::PrintStep(Peeling)
+[2022-05-24 17:00:55.453] [TRACE] command: "ac100118ff00000400000001d227acdc"
+[2022-05-24 17:00:55.489] [DEBUG] NotifyComm 通訊返回 "ac100118ff00000400000001d227acdc"
+[2022-05-24 17:00:55.530] [TRACE] Slave State change:  "ES-0 OPR-0 OPL-0 NP-1 ZT-0 ZB-0 ZS-0 ZR-0 ZZ-1 ZP-1 CAU-1 CAL-0 CGU-1 CGD-0 TL-1 CAE-0 ZAE-0 SP-1 ST-0 HES-1"  | F- "-30.80"
+[2022-05-24 17:00:55.729] [TRACE] Slave State change:  "ES-0 OPR-0 OPL-0 NP-0 ZT-0 ZB-0 ZS-0 ZR-0 ZZ-1 ZP-1 CAU-1 CAL-0 CGU-1 CGD-0 TL-1 CAE-0 ZAE-0 SP-1 ST-0 HES-1"  | F- "-9.60"
+[2022-05-24 17:00:56.072] [WARN] QModbusDevice::Error(TimeoutError) "Response timeout."
+[2022-05-24 17:01:01.068] [TRACE] slave:
+[2022-05-24 17:01:01.070] [TRACE] 	 |--- plateform: 1
+[2022-05-24 17:01:01.071] [TRACE] 	 |--- force: 2.9
+[2022-05-24 17:01:01.071] [TRACE] 	 |--- temp: 24.38
+[2022-05-24 17:01:01.071] [TRACE] 	 |--- humidity: 62.39
+[2022-05-24 17:01:01.071] [TRACE] heaint:
+[2022-05-24 17:01:01.071] [TRACE] 	 |--- temp: 22.91
+[2022-05-24 17:01:01.087] [TRACE] PublishMsgProcess 675 msgkey: "1002"
+[2022-05-24 17:01:08.071] [WARN] QModbusDevice::Error(TimeoutError) "Response timeout."
+[2022-05-24 17:01:08.129] [TRACE] Slave State change:  "ES-0 OPR-0 OPL-0 NP-0 ZT-0 ZB-0 ZS-1 ZR-0 ZZ-1 ZP-1 CAU-1 CAL-0 CGU-1 CGD-0 TL-1 CAE-0 ZAE-0 SP-1 ST-0 HES-1"  | F- "1.40"
+[2022-05-24 17:01:08.229] [TRACE] Slave State change:  "ES-0 OPR-0 OPL-0 NP-0 ZT-0 ZB-0 ZS-0 ZR-0 ZZ-1 ZP-1 CAU-1 CAL-0 CGU-1 CGD-0 TL-1 CAE-0 ZAE-0 SP-1 ST-0 HES-1"  | F- "1.50"
+[2022-05-24 17:01:09.382] [TRACE] exe result: "ZAXIS->SEGMENTED_MOTION" "COMMAND_SUCCESS"
+[2022-05-24 17:01:09.383] [DEBUG] end SyncPeel
+[2022-05-24 17:01:09.383] [TRACE] Escape 0 1376520
+[2022-05-24 17:01:09.384] [DEBUG] begin SyncPeel
+[2022-05-24 17:01:09.384] [TRACE] command: "ac100118ff00000400000002d367acdc"
+[2022-05-24 17:01:09.403] [DEBUG] discard slave return result 
+[2022-05-24 17:01:09.421] [DEBUG] discard slave return result 
+[2022-05-24 17:01:09.440] [TRACE] Slave State change:  "ES-0 OPR-0 OPL-0 NP-0 ZT-0 ZB-0 ZS-1 ZR-0 ZZ-1 ZP-0 CAU-1 CAL-0 CGU-1 CGD-0 TL-1 CAE-0 ZAE-0 SP-1 ST-0 HES-1"  | F- "0.10"
+[2022-05-24 17:01:09.458] [DEBUG] NotifyComm 通訊返回 "ac100118ff00000400000002d367acdc"
+[2022-05-24 17:01:09.529] [TRACE] Slave State change:  "ES-0 OPR-0 OPL-0 NP-0 ZT-0 ZB-0 ZS-0 ZR-0 ZZ-1 ZP-1 CAU-1 CAL-0 CGU-1 CGD-0 TL-1 CAE-0 ZAE-0 SP-1 ST-0 HES-1"  | F- "0.20"
+[2022-05-24 17:01:11.069] [TRACE] slave:
+[2022-05-24 17:01:11.069] [TRACE] 	 |--- force: -1
+[2022-05-24 17:01:11.105] [TRACE] PublishMsgProcess 675 msgkey: "1002"
+[2022-05-24 17:01:11.229] [TRACE] Slave State change:  "ES-0 OPR-0 OPL-0 NP-1 ZT-0 ZB-0 ZS-0 ZR-0 ZZ-1 ZP-1 CAU-1 CAL-0 CGU-1 CGD-0 TL-1 CAE-0 ZAE-0 SP-1 ST-0 HES-1"  | F- "-25.10"
+[2022-05-24 17:01:12.272] [TRACE] exe result: "ZAXIS->SEGMENTED_MOTION" "COMMAND_SUCCESS"
+[2022-05-24 17:01:12.273] [DEBUG] end SyncPeel
+[2022-05-24 17:01:12.274] [TRACE] Escape 0 1376520
+[2022-05-24 17:01:12.274] [TRACE] [PrintCtrl] peel up: Curlayer: 95 Number: "14"
+[2022-05-24 17:01:12.275] [TRACE] [PrintCtrl] speed[0]: 300, distance[0]: 1600
+[2022-05-24 17:01:12.275] [TRACE] [PrintCtrl] speed[1]: 300, distance[1]: 2400
+[2022-05-24 17:01:12.275] [TRACE] [PrintCtrl] speed[2]: 300, distance[2]: 3600
+[2022-05-24 17:01:12.275] [TRACE] [PrintCtrl] speed[3]: 6000, distance[3]: 6900
+[2022-05-24 17:01:12.275] [TRACE] [PrintCtrl] speed[4]: 10000, distance[4]: 18900
+[2022-05-24 17:01:12.275] [TRACE] [PrintCtrl] peel down: Curlayer: 95 Number: "14"
+[2022-05-24 17:01:12.276] [TRACE] [PrintCtrl] speed[0]: 10000, distance[0]: -18000
+[2022-05-24 17:01:12.276] [TRACE] [PrintCtrl] speed[1]: 500, distance[1]: -18850
+[2022-05-24 17:01:12.276] [TRACE] [PrintCtrl] speed[2]: 500, distance[2]: -18850
+[2022-05-24 17:01:12.276] [TRACE] [PrintCtrl] speed[3]: 500, distance[3]: -18850
+[2022-05-24 17:01:12.276] [TRACE] [PrintCtrl] speed[4]: 500, distance[4]: -18850
+[2022-05-24 17:01:12.276] [TRACE] - 95 - [peel][time] 16824 [peel][offset time] -425
+[2022-05-24 17:01:12.277] [DEBUG] [ "圆柱46高6M值.ult" ] step: PrintCtrl::PrintStep(Waiting)
+[2022-05-24 17:01:12.336] [TRACE] Slave State change:  "ES-0 OPR-0 OPL-0 NP-1 ZT-0 ZB-0 ZS-1 ZR-0 ZZ-1 ZP-0 CAU-1 CAL-0 CGU-1 CGD-0 TL-1 CAE-0 ZAE-0 SP-1 ST-0 HES-1"  | F- "-107.60"
+[2022-05-24 17:01:20.069] [WARN] QModbusDevice::Error(TimeoutError) "Response timeout."
+[2022-05-24 17:01:21.068] [TRACE] slave:
+[2022-05-24 17:01:21.069] [TRACE] 	 |--- plateform: -1
+[2022-05-24 17:01:21.069] [TRACE] 	 |--- force: -50.8
+[2022-05-24 17:01:21.069] [TRACE] 	 |--- temp: 24.3
+[2022-05-24 17:01:21.069] [TRACE] 	 |--- humidity: 62.44
+[2022-05-24 17:01:21.120] [TRACE] PublishMsgProcess 675 msgkey: "1002"
+[2022-05-24 17:01:31.069] [TRACE] slave:
+[2022-05-24 17:01:31.069] [TRACE] 	 |--- force: -39.7
+[2022-05-24 17:01:31.069] [TRACE] 	 |--- temp: 24.32
+[2022-05-24 17:01:31.069] [TRACE] 	 |--- humidity: 62.27
+[2022-05-24 17:01:31.069] [TRACE] heaint:
+[2022-05-24 17:01:31.069] [TRACE] 	 |--- temp: 22.59
+[2022-05-24 17:01:31.130] [TRACE] PublishMsgProcess 675 msgkey: "1002"
+[2022-05-24 17:01:32.071] [WARN] QModbusDevice::Error(TimeoutError) "Response timeout."
+[2022-05-24 17:01:41.069] [TRACE] slave:
+[2022-05-24 17:01:41.069] [TRACE] 	 |--- force: -31.4
+[2022-05-24 17:01:41.069] [TRACE] 	 |--- temp: 24.42
+[2022-05-24 17:01:41.069] [TRACE] 	 |--- humidity: 62.34
+[2022-05-24 17:01:41.069] [TRACE] heaint:
+[2022-05-24 17:01:41.069] [TRACE] 	 |--- temp: 23.23
+[2022-05-24 17:01:41.143] [TRACE] PublishMsgProcess 675 msgkey: "1002"
+[2022-05-24 17:01:42.069] [TRACE] [Hg_DailyRollingAppender] clearBeforeDays The logs generated before the specified date are cleared -  QDate("2021-11-25") log type: "print"
+[2022-05-24 17:01:42.070] [TRACE] [Hg_DailyRollingAppender] clearBeforeDays The logs generated before the specified date are cleared -  QDate("2022-04-24") log type: "hive"
+[2022-05-24 17:01:42.079] [TRACE] [Hg_DailyRollingAppender] clearBeforeDays The logs generated before the specified date are cleared -  QDate("2022-04-24") log type: "backend"
+[2022-05-24 17:01:42.274] [TRACE] - 95 - [wait][time] 30000 [wait][offset time] 0
+[2022-05-24 17:01:42.274] [TRACE]  ====== Begin Read Model  96 `th Loop ====== 
+[2022-05-24 17:01:42.274] [DEBUG] [ "圆柱46高6M值.ult" ] layer done
+[2022-05-24 17:01:42.274] [DEBUG] ReadModel 291
+[2022-05-24 17:01:42.274] [TRACE] UpdateTimecost >>>  115300 1200 -3172  remain layers:  25
+[2022-05-24 17:01:42.274] [DEBUG] the buffer is not Empty
+[2022-05-24 17:01:42.274] [DEBUG] [ "圆柱46高6M值.ult" ] step: PrintCtrl::PrintStep(Preprocessing)
+[2022-05-24 17:01:42.274] [DEBUG] Read Model Parser Finished!
+[2022-05-24 17:01:42.274] [DEBUG] 
+
+
+
+
+
+[2022-05-24 17:01:42.274] [DEBUG] --------
+[2022-05-24 17:01:42.274] [DEBUG] - 96 - [exposure][begin]
+[2022-05-24 17:01:42.275] [DEBUG] =================================== loop  105
+[2022-05-24 17:01:42.275] [DEBUG] [ "圆柱46高6M值.ult" ] layer start: 96 / 120
+[2022-05-24 17:01:42.275] [DEBUG] 进入这里-正常取图 106
+[2022-05-24 17:01:42.275] [TRACE] [ProjectCtrl] OnExposure
+[2022-05-24 17:01:42.275] [DEBUG] [ "圆柱46高6M值.ult" ] step: PrintCtrl::PrintStep(Exposuring)
+[2022-05-24 17:01:42.275] [TRACE] previewImg show time is  0
+[2022-05-24 17:01:42.275] [DEBUG] Start Image Process,Layer:  106 step: 10
+[2022-05-24 17:01:42.277] [DEBUG] handle base and get ELayerImgType_Object
+[2022-05-24 17:01:42.277] [TRACE] ULT: other Layer
+[2022-05-24 17:01:42.281] [TRACE] Discard Led Eff:  "LE_UNCOVERED"
+[2022-05-24 17:01:42.281] [DEBUG] src_mat fixed ... 1
+[2022-05-24 17:01:42.281] [DEBUG] src_mat fixed ... 0 "/tmp/.A2DTemp/S000106_P1.png"
+[2022-05-24 17:01:42.314] [TRACE] [ProjectCtrl] the current is: 281
+[2022-05-24 17:01:42.316] [TRACE] [Projector] LedOn
+[2022-05-24 17:01:42.317] [TRACE] [Ddp442x] setLedOnOff
+[2022-05-24 17:01:42.319] [TRACE] [Ddp442xApi] GpioOpen
+[2022-05-24 17:01:42.320] [TRACE] [Ddp442xApi] OpenWithRetry interfacenum: 2 , pre2retry: 3
+[2022-05-24 17:01:42.320] [TRACE] SetLedOnOff
+[2022-05-24 17:01:42.322] [TRACE] [ProjectorInterface] open_led success
+```
+
+
+
+A3D日志信息
+
+```
+2022-05-30,21-18-03 546065194816  UpdateWaitTime [layer:] 440 area_percent 10.33032512664795 Wait time is 300 
+2022-05-30,21-18-03 546065194816  UpdatePeelParam [layer:] 440 area_percent 10.33032512664795 Peel up params speed and dis: Vector{ 400 400 400 6000 6000 } Vector{ 170 350 500 3900 3900 } 
+2022-05-30,21-18-03 546065194816  UpdatePeelParam [layer:] 440 Peel down params speed and dis: Vector{ 6000 4000 4000 4000 4000 } Vector{ -2850 -3850 -3850 -3850 -3850 } 
+2022-05-30,21-18-08 544252897280  当前图层 410 等待时间 600 
+
+
+
+2022-05-30,21-18-08 546065194816  当前图层 441 曝光参数来自于标准 
+2022-05-30,21-18-08 546065194816  当前图层 441 曝光参数来自于标准 
+2022-05-30,21-18-08 546065194816  当前图层 441 曝光参数来自于标准 
+2022-05-30,21-18-09 546065194816  当前图层 441 曝光参数来自于标准 
+2022-05-30,21-18-09 546065194816  当前图层 441 曝光参数来自于标准 
+2022-05-30,21-18-09 546065194816  UpdateExposeParam 0:obj,1:contour,2:fill,3:support,4:preview 当前图层 441 Type: 0 Energy: 21 ExposeTime: 1250 
+2022-05-30,21-18-09 546065194816  UpdateExposeParam 0:obj,1:contour,2:fill,3:support,4:preview 当前图层 441 Type: 4 Energy: 0 ExposeTime: 0 
+2022-05-30,21-18-09 546065194816  UpdateWaitTime [layer:] 441 area_percent 10.256172180175781 Wait time is 300 
+2022-05-30,21-18-09 546065194816  UpdatePeelParam [layer:] 441 area_percent 10.256172180175781 Peel up params speed and dis: Vector{ 400 400 400 6000 6000 } Vector{ 170 350 500 3900 3900 } 
+2022-05-30,21-18-09 546065194816  UpdatePeelParam [layer:] 441 Peel down params speed and dis: Vector{ 6000 4000 4000 4000 4000 } Vector{ -2850 -3850 -3850 -3850 -3850 } 
+
+
+
+2022-05-30,21-18-13 544252897280  当前图层 411 等待时间 600 
+2022-05-30,21-18-14 546065194816  当前图层 442 曝光参数来自于标准 
+2022-05-30,21-18-14 546065194816  当前图层 442 曝光参数来自于标准 
+2022-05-30,21-18-14 546065194816  当前图层 442 曝光参数来自于标准 
+2022-05-30,21-18-15 546065194816  当前图层 442 曝光参数来自于标准 
+2022-05-30,21-18-15 546065194816  当前图层 442 曝光参数来自于标准 
+2022-05-30,21-18-15 546065194816  UpdateExposeParam 0:obj,1:contour,2:fill,3:support,4:preview 当前图层 442 Type: 0 Energy: 21 ExposeTime: 1250 
+2022-05-30,21-18-15 546065194816  UpdateExposeParam 0:obj,1:contour,2:fill,3:support,4:preview 当前图层 442 Type: 4 Energy: 0 ExposeTime: 0 
+2022-05-30,21-18-15 546065194816  UpdateWaitTime [layer:] 442 area_percent 10.2808837890625 Wait time is 300 
+2022-05-30,21-18-15 546065194816  UpdatePeelParam [layer:] 442 area_percent 10.2808837890625 Peel up params speed and dis: Vector{ 400 400 400 6000 6000 } Vector{ 170 350 500 3900 3900 } 
+2022-05-30,21-18-15 546065194816  UpdatePeelParam [layer:] 442 Peel down params speed and dis: Vector{ 6000 4000 4000 4000 4000 } Vector{ -2850 -3850 -3850 -3850 -3850 } 
+2022-05-30,21-18-19 544252897280  当前图层 412 等待时间 600 
+2022-05-30,21-18-20 546065194816  当前图层 443 曝光参数来自于标准 
+2022-05-30,21-18-20 546065194816  当前图层 443 曝光参数来自于标准 
+2022-05-30,21-18-20 546065194816  当前图层 443 曝光参数来自于标准 
+2022-05-30,21-18-21 546065194816  当前图层 443 曝光参数来自于标准 
+2022-05-30,21-18-21 546065194816  当前图层 443 曝光参数来自于标准 
+2022-05-30,21-18-21 546065194816  UpdateExposeParam 0:obj,1:contour,2:fill,3:support,4:preview 当前图层 443 Type: 0 Energy: 21 ExposeTime: 1250 
+2022-05-30,21-18-21 546065194816  UpdateExposeParam 0:obj,1:contour,2:fill,3:support,4:preview 当前图层 443 Type: 4 Energy: 0 ExposeTime: 0 
+2022-05-30,21-18-21 546065194816  UpdateWaitTime [layer:] 443 area_percent 10.087335586547852 Wait time is 300 
+2022-05-30,21-18-21 546065194816  UpdatePeelParam [layer:] 443 area_percent 10.087335586547852 Peel up params speed and dis: Vector{ 400 400 400 6000 6000 } Vector{ 170 350 500 3900 3900 } 
+2022-05-30,21-18-21 546065194816  UpdatePeelParam [layer:] 443 Peel down params speed and dis: Vector{ 6000 4000 4000 4000 4000 } Vector{ -2850 -3850 -3850 -3850 -3850 } 
+2022-05-30,21-18-25 544252897280  当前图层 413 等待时间 600 
+```
+
