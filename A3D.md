@@ -690,7 +690,11 @@ A3D日志信息
 
 A3D满版5个全颌面实心牙模
 
-91-248层共158层打印时间突然增加，每层增加将近20s，增加总时间接近1h
+91-248层共158层打印时间突然增加，每层增加将近20s，增加总时间接近1h，
+
+91层是M值从14段落到第13段
+
+248层是M值第13段的最后一层
 
 ```c++
 	行 525: 2022-06-01,18-25-41 545595235488  end print layer 87 cost time: 22.95s 
@@ -698,7 +702,7 @@ A3D满版5个全颌面实心牙模
 	行 537: 2022-06-01,18-26-30 545595235488  end print layer 89 cost time: 24.84s 
 	行 543: 2022-06-01,18-26-53 545595235488  end print layer 90 cost time: 22.90s 
 	
-	------以下层时间发生突变
+	------以下层91——248层时间发生突变
         
 	行 549: 2022-06-01,18-27-38 545595235488  end print layer 91 cost time: 44.42s 
 	行 555: 2022-06-01,18-28-22 545595235488  end print layer 92 cost time: 44.25s 
@@ -891,5 +895,122 @@ A3D满版5个全颌面实心牙模
 2022-06-01,18-26-55 545595235488  begin peel layer 91 percent: 159.41864013671875 Number: 13 up dis: Vector{ 1600 2400 3600 12900 12900 } down dis: Vector{ -12000 -12850 -12850 -12850 -12850 } 
 2022-06-01,18-27-28 545595235488  begin wait layer 91 percent: 159.41864013671875 Number: 13 wait time: 9500 
 2022-06-01,18-27-38 545595235488  end print layer 91 cost time: 44.42s 
+```
+
+
+
+4K上第13段运行时间为
+
+```cassandra
+[2022-05-31 14:53:40.617] [TRACE] PublishMsgProcess 675 msgkey: "1002"
+[2022-05-31 14:53:45.457] [TRACE] - 26 - [wait][time] 9501 [wait][offset time] 1
+[2022-05-31 14:53:45.457] [TRACE]  ====== Begin Read Model  27 `th Loop ====== 
+[2022-05-31 14:53:45.457] [DEBUG] [ "m108.ult" ] layer done
+[2022-05-31 14:53:45.457] [DEBUG] ReadModel 291
+[2022-05-31 14:53:45.457] [DEBUG] the buffer is not Empty
+[2022-05-31 14:53:45.458] [DEBUG] [ "m108.ult" ] step: PrintCtrl::PrintStep(Preprocessing)
+[2022-05-31 14:53:45.458] [DEBUG] Read Model Parser Finished!
+
+-------打印开始
+[2022-05-31 14:53:45.458] [DEBUG] - 27 - [exposure][begin]
+[2022-05-31 14:53:45.458] [DEBUG] --------
+[2022-05-31 14:53:45.458] [DEBUG] [ "m108.ult" ] layer start: 27 / 30
+[2022-05-31 14:53:45.458] [TRACE] [ProjectCtrl] OnExposure
+[2022-05-31 14:53:45.459] [TRACE] previewImg show time is  0
+[2022-05-31 14:53:45.459] [TRACE] Discard Led Eff:  "LE_UNCOVERED"
+[2022-05-31 14:53:45.459] [DEBUG] [ "m108.ult" ] step: PrintCtrl::PrintStep(Exposuring)
+[2022-05-31 14:53:45.491] [TRACE] [ProjectCtrl] the current is: 309
+[2022-05-31 14:53:45.491] [TRACE] [Projector] LedOn
+[2022-05-31 14:53:45.491] [TRACE] [Ddp442x] setLedOnOff
+[2022-05-31 14:53:45.491] [TRACE] [Ddp442xApi] GpioOpen
+[2022-05-31 14:53:45.491] [TRACE] [Ddp442xApi] OpenWithRetry interfacenum: 2 , pre2retry: 3
+[2022-05-31 14:53:45.492] [TRACE] SetLedOnOff
+[2022-05-31 14:53:45.492] [TRACE] [ProjectorInterface] open_led success
+[2022-05-31 14:53:45.492] [DEBUG] [Projector] LedOn result: no support
+[2022-05-31 14:53:45.492] [TRACE] [ProjectCtrl] OnExposure preset time: 1500
+[2022-05-31 14:53:45.522] [TRACE] PublishMsgProcess 675 msgkey: "1006"
+[2022-05-31 14:53:46.993] [TRACE] [ProjectCtrl] [exposure][time]: 1534
+[2022-05-31 14:53:46.993] [TRACE] [Projector] LedOff
+[2022-05-31 14:53:46.994] [TRACE] [Ddp442x] setLedOnOff
+[2022-05-31 14:53:46.994] [TRACE] [Ddp442xApi] GpioOpen
+[2022-05-31 14:53:46.994] [TRACE] [Ddp442xApi] OpenWithRetry interfacenum: 2 , pre2retry: 3
+[2022-05-31 14:53:46.995] [TRACE] SetLedOnOff
+[2022-05-31 14:53:46.995] [TRACE] [ProjectorInterface] close_led success
+[2022-05-31 14:53:46.998] [DEBUG] [Projector] LedOff result: no support
+[2022-05-31 14:53:47.042] [DEBUG] begin SyncPeel
+[2022-05-31 14:53:47.042] [TRACE] OnEnviromentCheck 57 data: QMap(("Projector", QVariant(bool, true))("Screen", QVariant(bool, true)))
+[2022-05-31 14:53:47.042] [TRACE] - 27 - [exposure][time] 1584 [exposure][offset time] 84
+[2022-05-31 14:53:47.042] [TRACE] command: "ac100118ff00000400000001d227acdc"
+[2022-05-31 14:53:47.042] [DEBUG] [ "m108.ult" ] step: PrintCtrl::PrintStep(Peeling)
+[2022-05-31 14:53:47.078] [DEBUG] NotifyComm 通訊返回 "ac100118ff00000400000001d227acdc"
+[2022-05-31 14:53:47.137] [TRACE] Slave State change:  "ES-0 OPR-0 OPL-0 NP-1 ZT-0 ZB-0 ZS-0 ZR-0 ZZ-1 ZP-1 CAU-1 CAL-0 CGU-1 CGD-0 TL-1 CAE-0 ZAE-0 SP-1 ST-1 HES-1"  | F- "-93.40"
+[2022-05-31 14:53:47.836] [TRACE] Slave State change:  "ES-0 OPR-0 OPL-0 NP-0 ZT-0 ZB-0 ZS-0 ZR-0 ZZ-1 ZP-1 CAU-1 CAL-0 CGU-1 CGD-0 TL-1 CAE-0 ZAE-0 SP-1 ST-1 HES-1"  | F- "19.10"
+[2022-05-31 14:53:50.532] [TRACE] slave:
+[2022-05-31 14:53:50.532] [TRACE] 	 |--- plateform: 1
+[2022-05-31 14:53:50.533] [TRACE] 	 |--- force: 3.7
+[2022-05-31 14:53:50.533] [TRACE] 	 |--- temp: 24.68
+[2022-05-31 14:53:50.534] [TRACE] 	 |--- humidity: 59.66
+[2022-05-31 14:53:50.631] [TRACE] PublishMsgProcess 675 msgkey: "1002"
+[2022-05-31 14:54:00.531] [TRACE] slave:
+[2022-05-31 14:54:00.532] [TRACE] 	 |--- force: 0.7
+[2022-05-31 14:54:00.533] [TRACE] 	 |--- temp: 24.73
+[2022-05-31 14:54:00.534] [TRACE] 	 |--- humidity: 59.65
+[2022-05-31 14:54:00.535] [TRACE] heaint:
+[2022-05-31 14:54:00.536] [TRACE] 	 |--- temp: 24.77
+[2022-05-31 14:54:00.547] [TRACE] PublishMsgProcess 675 msgkey: "1002"
+[2022-05-31 14:54:00.792] [TRACE] exe result: "ZAXIS->SEGMENTED_MOTION" "COMMAND_SUCCESS"
+[2022-05-31 14:54:00.792] [DEBUG] end SyncPeel
+[2022-05-31 14:54:00.793] [TRACE] Escape 0 1376520
+[2022-05-31 14:54:00.794] [DEBUG] begin SyncPeel
+[2022-05-31 14:54:00.794] [TRACE] command: "ac100118ff00000400000002d367acdc"
+[2022-05-31 14:54:00.803] [DEBUG] discard slave return result 
+[2022-05-31 14:54:00.821] [DEBUG] discard slave return result 
+[2022-05-31 14:54:00.849] [TRACE] Slave State change:  "ES-0 OPR-0 OPL-0 NP-0 ZT-0 ZB-0 ZS-1 ZR-0 ZZ-1 ZP-0 CAU-1 CAL-0 CGU-1 CGD-0 TL-1 CAE-0 ZAE-0 SP-1 ST-1 HES-1"  | F- "0.60"
+[2022-05-31 14:54:00.869] [DEBUG] NotifyComm 通訊返回 "ac100118ff00000400000002d367acdc"
+[2022-05-31 14:54:00.936] [TRACE] Slave State change:  "ES-0 OPR-0 OPL-0 NP-0 ZT-0 ZB-0 ZS-0 ZR-0 ZZ-1 ZP-1 CAU-1 CAL-0 CGU-1 CGD-0 TL-1 CAE-0 ZAE-0 SP-1 ST-1 HES-1"  | F- "0.00"
+[2022-05-31 14:54:02.536] [TRACE] Slave State change:  "ES-0 OPR-0 OPL-0 NP-1 ZT-0 ZB-0 ZS-0 ZR-0 ZZ-1 ZP-1 CAU-1 CAL-0 CGU-1 CGD-0 TL-1 CAE-0 ZAE-0 SP-1 ST-1 HES-1"  | F- "-11.60"
+[2022-05-31 14:54:04.355] [TRACE] exe result: "ZAXIS->SEGMENTED_MOTION" "COMMAND_SUCCESS"
+[2022-05-31 14:54:04.356] [DEBUG] end SyncPeel
+[2022-05-31 14:54:04.356] [TRACE] Escape 0 1376520
+[2022-05-31 14:54:04.356] [TRACE] [PrintCtrl] peel up: Curlayer: 27 Number: "13"
+[2022-05-31 14:54:04.357] [TRACE] [PrintCtrl] speed[0]: 300, distance[0]: 1600
+[2022-05-31 14:54:04.357] [TRACE] [PrintCtrl] speed[1]: 300, distance[1]: 2400
+[2022-05-31 14:54:04.357] [TRACE] [PrintCtrl] speed[2]: 300, distance[2]: 3600
+[2022-05-31 14:54:04.357] [TRACE] [PrintCtrl] speed[3]: 6000, distance[3]: 12900
+[2022-05-31 14:54:04.357] [TRACE] [PrintCtrl] speed[4]: 6000, distance[4]: 12900
+[2022-05-31 14:54:04.358] [TRACE] [PrintCtrl] peel down: Curlayer: 27 Number: "13"
+[2022-05-31 14:54:04.358] [TRACE] [PrintCtrl] speed[0]: 6000, distance[0]: -12000
+[2022-05-31 14:54:04.358] [TRACE] [PrintCtrl] speed[1]: 500, distance[1]: -12850
+[2022-05-31 14:54:04.358] [TRACE] [PrintCtrl] speed[2]: 500, distance[2]: -12850
+[2022-05-31 14:54:04.358] [TRACE] [PrintCtrl] speed[3]: 500, distance[3]: -12850
+[2022-05-31 14:54:04.358] [TRACE] [PrintCtrl] speed[4]: 500, distance[4]: -12850
+[2022-05-31 14:54:04.359] [TRACE] - 27 - [peel][time] 17314 [peel][offset time] 65
+[2022-05-31 14:54:04.359] [DEBUG] [ "m108.ult" ] step: PrintCtrl::PrintStep(Waiting)
+[2022-05-31 14:54:04.436] [TRACE] Slave State change:  "ES-0 OPR-0 OPL-0 NP-1 ZT-0 ZB-0 ZS-1 ZR-0 ZZ-1 ZP-0 CAU-1 CAL-0 CGU-1 CGD-0 TL-1 CAE-0 ZAE-0 SP-1 ST-1 HES-1"  | F- "-101.50"
+[2022-05-31 14:54:10.532] [TRACE] slave:
+[2022-05-31 14:54:10.532] [TRACE] 	 |--- plateform: -1
+[2022-05-31 14:54:10.533] [TRACE] 	 |--- force: -94
+[2022-05-31 14:54:10.533] [TRACE] 	 |--- temp: 24.78
+[2022-05-31 14:54:10.533] [TRACE] heaint:
+[2022-05-31 14:54:10.533] [TRACE] 	 |--- temp: 23.88
+[2022-05-31 14:54:10.559] [TRACE] PublishMsgProcess 675 msgkey: "1002"
+[2022-05-31 14:54:13.856] [TRACE] - 27 - [wait][time] 9500 [wait][offset time] 0
+[2022-05-31 14:54:13.856] [TRACE]  ====== Begin Read Model  28 `th Loop ====== 
+[2022-05-31 14:54:13.856] [DEBUG] [ "m108.ult" ] layer done
+
+------打印结束
+
+
+[2022-05-31 14:54:13.856] [DEBUG] ReadModel 291
+[2022-05-31 14:54:13.856] [DEBUG] [ "m108.ult" ] step: PrintCtrl::PrintStep(Preprocessing)
+[2022-05-31 14:54:13.856] [DEBUG] the buffer is not Empty
+[2022-05-31 14:54:13.856] [DEBUG] Read Model Parser Finished!
+[2022-05-31 14:54:13.856] [DEBUG] - 28 - [exposure][begin]
+[2022-05-31 14:54:13.856] [DEBUG] --------
+[2022-05-31 14:54:13.856] [TRACE] [ProjectCtrl] OnExposure
+[2022-05-31 14:54:13.856] [DEBUG] [ "m108.ult" ] layer start: 28 / 30
+[2022-05-31 14:54:13.856] [TRACE] previewImg show time is  0
+[2022-05-31 14:54:13.857] [DEBUG] [ "m108.ult" ] step: PrintCtrl::PrintStep(Exposuring)
+[2022-05-31 14:54:13.857] [TRACE] Discard Led Eff:  "LE_UNCOVERED"
 ```
 
