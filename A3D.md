@@ -899,7 +899,7 @@ A3D满版5个全颌面实心牙模
 
 
 
-4K上第13段运行时间为
+4K上进入M值第13段的打印时间为约30s
 
 ```cassandra
 [2022-05-31 14:53:40.617] [TRACE] PublishMsgProcess 675 msgkey: "1002"
