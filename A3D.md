@@ -686,3 +686,210 @@ A3D日志信息
 2022-05-30,21-18-25 544252897280  当前图层 413 等待时间 600 
 ```
 
+
+
+A3D满版5个全颌面实心牙模
+
+91-248层共158层打印时间突然增加，每层增加将近20s，增加总时间接近1h
+
+```c++
+	行 525: 2022-06-01,18-25-41 545595235488  end print layer 87 cost time: 22.95s 
+	行 531: 2022-06-01,18-26-05 545595235488  end print layer 88 cost time: 24.80s 
+	行 537: 2022-06-01,18-26-30 545595235488  end print layer 89 cost time: 24.84s 
+	行 543: 2022-06-01,18-26-53 545595235488  end print layer 90 cost time: 22.90s 
+	
+	------以下层时间发生突变
+        
+	行 549: 2022-06-01,18-27-38 545595235488  end print layer 91 cost time: 44.42s 
+	行 555: 2022-06-01,18-28-22 545595235488  end print layer 92 cost time: 44.25s 
+	行 561: 2022-06-01,18-29-03 545595235488  end print layer 93 cost time: 41.56s 
+	行 567: 2022-06-01,18-29-45 545595235488  end print layer 94 cost time: 41.49s 
+	行 573: 2022-06-01,18-30-26 545595235488  end print layer 95 cost time: 41.50s 
+	行 579: 2022-06-01,18-31-08 545595235488  end print layer 96 cost time: 41.42s 
+	行 585: 2022-06-01,18-31-49 545595235488  end print layer 97 cost time: 41.44s 
+	行 591: 2022-06-01,18-32-31 545595235488  end print layer 98 cost time: 41.34s 
+	行 597: 2022-06-01,18-33-15 545595235488  end print layer 99 cost time: 44.08s 
+	行 603: 2022-06-01,18-33-56 545595235488  end print layer 100 cost time: 41.44s 
+	行 609: 2022-06-01,18-34-38 545595235488  end print layer 101 cost time: 41.40s 
+	行 615: 2022-06-01,18-35-19 545595235488  end print layer 102 cost time: 41.52s 
+	行 621: 2022-06-01,18-36-00 545595235488  end print layer 103 cost time: 41.33s 
+	行 627: 2022-06-01,18-36-42 545595235488  end print layer 104 cost time: 41.46s 
+	行 633: 2022-06-01,18-37-23 545595235488  end print layer 105 cost time: 41.48s 
+	行 639: 2022-06-01,18-38-05 545595235488  end print layer 106 cost time: 41.39s 
+	行 645: 2022-06-01,18-38-46 545595235488  end print layer 107 cost time: 41.42s 
+	行 651: 2022-06-01,18-39-30 545595235488  end print layer 108 cost time: 44.33s 
+	行 657: 2022-06-01,18-40-18 545595235488  end print layer 109 cost time: 47.47s 
+	行 663: 2022-06-01,18-41-02 545595235488  end print layer 110 cost time: 44.15s 
+	行 669: 2022-06-01,18-41-44 545595235488  end print layer 111 cost time: 41.39s 
+	行 675: 2022-06-01,18-42-28 545595235488  end print layer 112 cost time: 44.27s 
+	行 681: 2022-06-01,18-43-09 545595235488  end print layer 113 cost time: 41.47s 
+	行 687: 2022-06-01,18-43-51 545595235488  end print layer 114 cost time: 41.49s 
+	行 693: 2022-06-01,18-44-32 545595235488  end print layer 115 cost time: 41.48s 
+	行 699: 2022-06-01,18-45-14 545595235488  end print layer 116 cost time: 41.52s 
+	行 705: 2022-06-01,18-45-58 545595235488  end print layer 117 cost time: 44.28s 
+	行 711: 2022-06-01,18-46-45 545595235488  end print layer 118 cost time: 47.43s 
+	行 717: 2022-06-01,18-47-33 545595235488  end print layer 119 cost time: 47.40s 
+	行 723: 2022-06-01,18-48-14 545595235488  end print layer 120 cost time: 41.53s 
+	行 729: 2022-06-01,18-48-59 545595235488  end print layer 121 cost time: 44.19s 
+	行 735: 2022-06-01,18-49-40 545595235488  end print layer 122 cost time: 41.47s 
+	行 741: 2022-06-01,18-50-21 545595235488  end print layer 123 cost time: 41.43s 
+	行 747: 2022-06-01,18-51-03 545595235488  end print layer 124 cost time: 41.53s 
+	行 753: 2022-06-01,18-51-44 545595235488  end print layer 125 cost time: 41.43s 
+	行 759: 2022-06-01,18-52-26 545595235488  end print layer 126 cost time: 41.49s 
+	行 765: 2022-06-01,18-53-07 545595235488  end print layer 127 cost time: 41.39s 
+	行 771: 2022-06-01,18-53-52 545595235488  end print layer 128 cost time: 44.34s 
+	行 777: 2022-06-01,18-54-33 545595235488  end print layer 129 cost time: 41.45s 
+	行 783: 2022-06-01,18-55-15 545595235488  end print layer 130 cost time: 41.49s 
+	行 789: 2022-06-01,18-56-02 545595235488  end print layer 131 cost time: 47.44s 
+	行 795: 2022-06-01,18-56-46 545595235488  end print layer 132 cost time: 44.22s 
+	行 801: 2022-06-01,18-57-34 545595235488  end print layer 133 cost time: 47.22s 
+	行 807: 2022-06-01,18-58-15 545595235488  end print layer 134 cost time: 41.51s 
+	行 813: 2022-06-01,18-58-59 545595235488  end print layer 135 cost time: 44.29s 
+	行 819: 2022-06-01,18-59-44 545595235488  end print layer 136 cost time: 44.21s 
+	行 825: 2022-06-01,19-00-25 545595235488  end print layer 137 cost time: 41.48s 
+	行 831: 2022-06-01,19-01-09 545595235488  end print layer 138 cost time: 44.17s 
+	行 837: 2022-06-01,19-01-51 545595235488  end print layer 139 cost time: 41.48s 
+	行 843: 2022-06-01,19-02-35 545595235488  end print layer 140 cost time: 44.30s 
+	行 849: 2022-06-01,19-03-19 545595235488  end print layer 141 cost time: 44.31s 
+	行 855: 2022-06-01,19-04-01 545595235488  end print layer 142 cost time: 41.39s 
+	行 861: 2022-06-01,19-04-45 545595235488  end print layer 143 cost time: 44.22s 
+	行 867: 2022-06-01,19-05-29 545595235488  end print layer 144 cost time: 44.23s 
+	行 873: 2022-06-01,19-06-13 545595235488  end print layer 145 cost time: 44.26s 
+	行 879: 2022-06-01,19-06-58 545595235488  end print layer 146 cost time: 44.27s 
+	行 885: 2022-06-01,19-07-45 545595235488  end print layer 147 cost time: 47.36s 
+	行 891: 2022-06-01,19-08-32 545595235488  end print layer 148 cost time: 47.40s 
+	行 897: 2022-06-01,19-09-14 545595235488  end print layer 149 cost time: 41.37s 
+	行 903: 2022-06-01,19-09-58 545595235488  end print layer 150 cost time: 44.22s 
+	行 909: 2022-06-01,19-10-39 545595235488  end print layer 151 cost time: 41.40s 
+	行 915: 2022-06-01,19-11-27 545595235488  end print layer 152 cost time: 47.42s 
+	行 921: 2022-06-01,19-12-14 545595235488  end print layer 153 cost time: 47.27s 
+	行 927: 2022-06-01,19-12-58 545595235488  end print layer 154 cost time: 44.27s 
+	行 933: 2022-06-01,19-13-46 545595235488  end print layer 155 cost time: 47.36s 
+	行 939: 2022-06-01,19-14-30 545595235488  end print layer 156 cost time: 44.23s 
+	行 945: 2022-06-01,19-15-11 545595235488  end print layer 157 cost time: 41.40s 
+	行 951: 2022-06-01,19-15-56 545595235488  end print layer 158 cost time: 44.30s 
+	行 957: 2022-06-01,19-16-43 545595235488  end print layer 159 cost time: 47.37s 
+	行 963: 2022-06-01,19-17-27 545595235488  end print layer 160 cost time: 44.22s 
+	行 969: 2022-06-01,19-18-11 545595235488  end print layer 161 cost time: 44.23s 
+	行 975: 2022-06-01,19-18-56 545595235488  end print layer 162 cost time: 44.27s 
+	行 981: 2022-06-01,19-19-40 545595235488  end print layer 163 cost time: 44.24s 
+	行 987: 2022-06-01,19-20-21 545595235488  end print layer 164 cost time: 41.45s 
+	行 993: 2022-06-01,19-21-06 545595235488  end print layer 165 cost time: 44.29s 
+	行 999: 2022-06-01,19-21-47 545595235488  end print layer 166 cost time: 41.44s 
+	行 1005: 2022-06-01,19-22-29 545595235488  end print layer 167 cost time: 41.41s 
+	行 1011: 2022-06-01,19-23-16 545595235488  end print layer 168 cost time: 47.43s 
+	行 1017: 2022-06-01,19-24-03 545595235488  end print layer 169 cost time: 47.45s 
+	行 1023: 2022-06-01,19-24-51 545595235488  end print layer 170 cost time: 47.43s 
+	行 1029: 2022-06-01,19-25-35 545595235488  end print layer 171 cost time: 44.26s 
+	行 1035: 2022-06-01,19-26-17 545595235488  end print layer 172 cost time: 41.45s 
+	行 1041: 2022-06-01,19-27-04 545595235488  end print layer 173 cost time: 47.28s 
+	行 1047: 2022-06-01,19-27-45 545595235488  end print layer 174 cost time: 41.41s 
+	行 1053: 2022-06-01,19-28-30 545595235488  end print layer 175 cost time: 44.27s 
+	行 1059: 2022-06-01,19-29-14 545595235488  end print layer 176 cost time: 44.27s 
+	行 1065: 2022-06-01,19-29-55 545595235488  end print layer 177 cost time: 41.39s 
+	行 1071: 2022-06-01,19-30-37 545595235488  end print layer 178 cost time: 41.49s 
+	行 1077: 2022-06-01,19-31-21 545595235488  end print layer 179 cost time: 44.33s 
+	行 1083: 2022-06-01,19-32-03 545595235488  end print layer 180 cost time: 41.45s 
+	行 1089: 2022-06-01,19-32-47 545595235488  end print layer 181 cost time: 44.27s 
+	行 1095: 2022-06-01,19-33-28 545595235488  end print layer 182 cost time: 41.43s 
+	行 1101: 2022-06-01,19-34-10 545595235488  end print layer 183 cost time: 41.37s 
+	行 1107: 2022-06-01,19-34-57 545595235488  end print layer 184 cost time: 47.34s 
+	行 1113: 2022-06-01,19-35-38 545595235488  end print layer 185 cost time: 41.46s 
+	行 1119: 2022-06-01,19-36-26 545595235488  end print layer 186 cost time: 47.32s 
+	行 1125: 2022-06-01,19-37-13 545595235488  end print layer 187 cost time: 47.35s 
+	行 1131: 2022-06-01,19-37-55 545595235488  end print layer 188 cost time: 41.43s 
+	行 1137: 2022-06-01,19-38-42 545595235488  end print layer 189 cost time: 47.44s 
+	行 1143: 2022-06-01,19-39-26 545595235488  end print layer 190 cost time: 44.20s 
+	行 1149: 2022-06-01,19-40-08 545595235488  end print layer 191 cost time: 41.52s 
+	行 1155: 2022-06-01,19-40-49 545595235488  end print layer 192 cost time: 41.44s 
+	行 1161: 2022-06-01,19-41-31 545595235488  end print layer 193 cost time: 41.44s 
+	行 1167: 2022-06-01,19-42-15 545595235488  end print layer 194 cost time: 44.24s 
+	行 1173: 2022-06-01,19-42-59 545595235488  end print layer 195 cost time: 44.26s 
+	行 1179: 2022-06-01,19-43-46 545595235488  end print layer 196 cost time: 47.41s 
+	行 1185: 2022-06-01,19-44-28 545595235488  end print layer 197 cost time: 41.49s 
+	行 1191: 2022-06-01,19-45-15 545595235488  end print layer 198 cost time: 47.38s 
+	行 1197: 2022-06-01,19-46-00 545595235488  end print layer 199 cost time: 44.29s 
+	行 1203: 2022-06-01,19-46-44 545595235488  end print layer 200 cost time: 44.25s 
+	行 1209: 2022-06-01,19-47-31 545595235488  end print layer 201 cost time: 47.36s 
+	行 1215: 2022-06-01,19-48-19 545595235488  end print layer 202 cost time: 47.41s 
+	行 1221: 2022-06-01,19-49-06 545595235488  end print layer 203 cost time: 47.39s 
+	行 1227: 2022-06-01,19-49-50 545595235488  end print layer 204 cost time: 44.23s 
+	行 1233: 2022-06-01,19-50-38 545595235488  end print layer 205 cost time: 47.40s 
+	行 1239: 2022-06-01,19-51-25 545595235488  end print layer 206 cost time: 47.39s 
+	行 1245: 2022-06-01,19-52-07 545595235488  end print layer 207 cost time: 41.44s 
+	行 1251: 2022-06-01,19-52-54 545595235488  end print layer 208 cost time: 47.34s 
+	行 1257: 2022-06-01,19-53-41 545595235488  end print layer 209 cost time: 47.18s 
+	行 1263: 2022-06-01,19-54-28 545595235488  end print layer 210 cost time: 47.34s 
+	行 1269: 2022-06-01,19-55-13 545595235488  end print layer 211 cost time: 44.30s 
+	行 1275: 2022-06-01,19-55-54 545595235488  end print layer 212 cost time: 41.42s 
+	行 1281: 2022-06-01,19-56-42 545595235488  end print layer 213 cost time: 47.42s 
+	行 1287: 2022-06-01,19-57-23 545595235488  end print layer 214 cost time: 41.41s 
+	行 1293: 2022-06-01,19-58-04 545595235488  end print layer 215 cost time: 41.38s 
+	行 1299: 2022-06-01,19-58-48 545595235488  end print layer 216 cost time: 44.11s 
+	行 1305: 2022-06-01,19-59-36 545595235488  end print layer 217 cost time: 47.42s 
+	行 1311: 2022-06-01,20-00-20 545595235488  end print layer 218 cost time: 44.32s 
+	行 1317: 2022-06-01,20-01-04 545595235488  end print layer 219 cost time: 44.28s 
+	行 1323: 2022-06-01,20-01-52 545595235488  end print layer 220 cost time: 47.37s 
+	行 1329: 2022-06-01,20-02-36 545595235488  end print layer 221 cost time: 44.26s 
+	行 1335: 2022-06-01,20-03-20 545595235488  end print layer 222 cost time: 44.25s 
+	行 1341: 2022-06-01,20-04-05 545595235488  end print layer 223 cost time: 44.26s 
+	行 1347: 2022-06-01,20-04-49 545595235488  end print layer 224 cost time: 44.25s 
+	行 1353: 2022-06-01,20-05-36 545595235488  end print layer 225 cost time: 47.36s 
+	行 1359: 2022-06-01,20-06-24 545595235488  end print layer 226 cost time: 47.40s 
+	行 1365: 2022-06-01,20-07-08 545595235488  end print layer 227 cost time: 44.26s 
+	行 1371: 2022-06-01,20-07-55 545595235488  end print layer 228 cost time: 47.41s 
+	行 1377: 2022-06-01,20-08-43 545595235488  end print layer 229 cost time: 47.45s 
+	行 1383: 2022-06-01,20-09-24 545595235488  end print layer 230 cost time: 41.35s 
+	行 1389: 2022-06-01,20-10-08 545595235488  end print layer 231 cost time: 44.24s 
+	行 1395: 2022-06-01,20-10-50 545595235488  end print layer 232 cost time: 41.39s 
+	行 1401: 2022-06-01,20-11-37 545595235488  end print layer 233 cost time: 47.42s 
+	行 1407: 2022-06-01,20-12-25 545595235488  end print layer 234 cost time: 47.42s 
+	行 1413: 2022-06-01,20-13-12 545595235488  end print layer 235 cost time: 47.38s 
+	行 1419: 2022-06-01,20-13-59 545595235488  end print layer 236 cost time: 47.30s 
+	行 1425: 2022-06-01,20-14-47 545595235488  end print layer 237 cost time: 47.33s 
+	行 1431: 2022-06-01,20-15-34 545595235488  end print layer 238 cost time: 47.35s 
+	行 1437: 2022-06-01,20-16-21 545595235488  end print layer 239 cost time: 47.31s 
+	行 1443: 2022-06-01,20-17-09 545595235488  end print layer 240 cost time: 47.40s 
+	行 1449: 2022-06-01,20-17-56 545595235488  end print layer 241 cost time: 47.35s 
+	行 1455: 2022-06-01,20-18-43 545595235488  end print layer 242 cost time: 47.32s 
+	行 1461: 2022-06-01,20-19-30 545595235488  end print layer 243 cost time: 47.18s 
+	行 1467: 2022-06-01,20-20-18 545595235488  end print layer 244 cost time: 47.39s 
+	行 1473: 2022-06-01,20-21-05 545595235488  end print layer 245 cost time: 47.42s 
+	行 1479: 2022-06-01,20-21-47 545595235488  end print layer 246 cost time: 41.50s 
+	行 1485: 2022-06-01,20-22-28 545595235488  end print layer 247 cost time: 41.47s 
+	行 1491: 2022-06-01,20-23-10 545595235488  end print layer 248 cost time: 41.35s 
+	
+	----以上时间突变结束
+	
+	行 1497: 2022-06-01,20-23-22 545595235488  end print layer 249 cost time: 12.86s 
+	行 1503: 2022-06-01,20-23-35 545595235488  end print layer 250 cost time: 12.62s 
+```
+
+
+
+```cassandra
+-----89层具体打印信息
+2022-06-01,18-26-05 545595235488  begin print layer 89 
+2022-06-01,18-26-06 545595235488  begin Exposure layer 89 wait time: 1250 
+2022-06-01,18-26-07 545595235488  end Exposure end  
+2022-06-01,18-26-07 545595235488  begin peel layer 89 percent: 161.6649932861328 Number: 14 up dis: Vector{ 1600 2400 3600 6900 18900 } down dis: Vector{ -18000 -18850 -18850 -18850 -18850 } 
+2022-06-01,18-26-18 545595235488  begin wait layer 89 percent: 161.6649932861328 Number: 14 wait time: 12100 
+2022-06-01,18-26-30 545595235488  end print layer 89 cost time: 24.84s 
+
+----90层
+2022-06-01,18-26-30 545595235488  begin print layer 90 
+2022-06-01,18-26-31 545595235488  begin Exposure layer 90 wait time: 1250 
+2022-06-01,18-26-32 545595235488  end Exposure end  
+2022-06-01,18-26-32 545595235488  begin peel layer 90 percent: 160.57208251953125 Number: 14 up dis: Vector{ 1600 2400 3600 6900 18900 } down dis: Vector{ -18000 -18850 -18850 -18850 -18850 } 
+2022-06-01,18-26-41 545595235488  begin wait layer 90 percent: 160.57208251953125 Number: 14 wait time: 12100 
+2022-06-01,18-26-53 545595235488  end print layer 90 cost time: 22.90s 
+
+------91层
+2022-06-01,18-26-53 545595235488  begin print layer 91 
+2022-06-01,18-26-54 545595235488  begin Exposure layer 91 wait time: 1250 
+2022-06-01,18-26-55 545595235488  end Exposure end  
+2022-06-01,18-26-55 545595235488  begin peel layer 91 percent: 159.41864013671875 Number: 13 up dis: Vector{ 1600 2400 3600 12900 12900 } down dis: Vector{ -12000 -12850 -12850 -12850 -12850 } 
+2022-06-01,18-27-28 545595235488  begin wait layer 91 percent: 159.41864013671875 Number: 13 wait time: 9500 
+2022-06-01,18-27-38 545595235488  end print layer 91 cost time: 44.42s 
+```
+
