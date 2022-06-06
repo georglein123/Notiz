@@ -1,11 +1,5 @@
 A3D
 
-1.机台上日志信息保留一周，不用覆盖
-
-2.协调机台案例打印测试
-
-3.
-
 日志查看
 
 ![image-20220517144829678](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220517144829678.png)
@@ -13,6 +7,24 @@ A3D
 传感器信息：
 
 ![image-20220530140649738](E:\文档\GitHub\Notiz\A3D.assets\image-20220530140649738.png)
+
+
+
+设置模拟打印：
+
+![image-20220606111135379](E:\文档\GitHub\Notiz\A3D.assets\image-20220606111135379.png)
+
+从主目录中进入指定路径：`cd /usr/local/ultracore/`
+
+然后打开指定文件：`sudo vi ./.env6月1日 16:58`
+
+打开指定文件后，点击键盘`I`，进入编辑模式
+
+打开模拟打印：打开`SIMULATE`参数
+
+去除模拟打印：在`SIMULATE`前加上`#`，注释掉即可
+
+
 
 
 
