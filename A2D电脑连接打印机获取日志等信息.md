@@ -37,6 +37,9 @@ A2D日志相关信息阅读：
 [2022-05-31 14:54:13.857] [TRACE] Discard Led Eff:  "LE_UNCOVERED"
 [2022-05-31 14:54:13.862] [TRACE] PublishMsgProcess 675 msgkey: "1006"
 [2022-05-31 14:54:13.880] [TRACE] [ProjectCtrl] the current is: 309
+
+------开始曝光
+
 [2022-05-31 14:54:13.880] [TRACE] [Projector] LedOn
 [2022-05-31 14:54:13.881] [TRACE] [Ddp442x] setLedOnOff
 [2022-05-31 14:54:13.881] [TRACE] [Ddp442xApi] GpioOpen
@@ -47,6 +50,9 @@ A2D日志相关信息阅读：
 [2022-05-31 14:54:13.885] [TRACE] [ProjectCtrl] OnExposure preset time: 1500
 [2022-05-31 14:54:15.386] [TRACE] [ProjectCtrl] [exposure][time]: 1528
 [2022-05-31 14:54:15.387] [TRACE] [Projector] LedOff
+
+------结束曝光
+
 [2022-05-31 14:54:15.387] [TRACE] [Ddp442x] setLedOnOff
 [2022-05-31 14:54:15.388] [TRACE] [Ddp442xApi] GpioOpen
 [2022-05-31 14:54:15.389] [TRACE] [Ddp442xApi] OpenWithRetry interfacenum: 2 , pre2retry: 3
@@ -55,6 +61,9 @@ A2D日志相关信息阅读：
 [2022-05-31 14:54:15.392] [DEBUG] [Projector] LedOff result: no support
 [2022-05-31 14:54:15.429] [TRACE] OnEnviromentCheck 57 data: QMap(("Projector", QVariant(bool, true))("Screen", QVariant(bool, true)))
 [2022-05-31 14:54:15.429] [TRACE] - 28 - [exposure][time] 1573 [exposure][offset time] 73
+
+-----上剥离
+
 [2022-05-31 14:54:15.429] [DEBUG] begin SyncPeel
 [2022-05-31 14:54:15.429] [DEBUG] [ "m108.ult" ] step: PrintCtrl::PrintStep(Peeling)
 [2022-05-31 14:54:15.429] [TRACE] command: "ac100118ff00000400000001d227acdc"
@@ -68,8 +77,14 @@ A2D日志相关信息阅读：
 [2022-05-31 14:54:20.533] [TRACE] 	 |--- temp: 23.56
 [2022-05-31 14:54:20.573] [TRACE] PublishMsgProcess 675 msgkey: "1002"
 [2022-05-31 14:54:29.117] [TRACE] exe result: "ZAXIS->SEGMENTED_MOTION" "COMMAND_SUCCESS"
-[2022-05-31 14:54:29.118] [DEBUG] end SyncPeel
+[2022-05-31 14:54:29.118] [DEBUG] end SyncPeel （下位机以走完工艺包上剥离行程为判断条件）
+
+------上剥离结束
+
 [2022-05-31 14:54:29.118] [TRACE] Escape 0 1376520
+
+------下剥离
+
 [2022-05-31 14:54:29.118] [DEBUG] begin SyncPeel
 [2022-05-31 14:54:29.119] [TRACE] command: "ac100118ff00000400000002d367acdc"
 [2022-05-31 14:54:29.137] [DEBUG] discard slave return result 
@@ -87,6 +102,9 @@ A2D日志相关信息阅读：
 [2022-05-31 14:54:30.936] [TRACE] Slave State change:  "ES-0 OPR-0 OPL-0 NP-1 ZT-0 ZB-0 ZS-0 ZR-0 ZZ-1 ZP-1 CAU-1 CAL-0 CGU-1 CGD-0 TL-1 CAE-0 ZAE-0 SP-1 ST-1 HES-1"  | F- "-18.00"
 [2022-05-31 14:54:32.667] [TRACE] exe result: "ZAXIS->SEGMENTED_MOTION" "COMMAND_SUCCESS"
 [2022-05-31 14:54:32.668] [DEBUG] end SyncPeel
+
+-----下剥离结束
+
 [2022-05-31 14:54:32.669] [TRACE] Escape 0 1376520
 [2022-05-31 14:54:32.670] [TRACE] [PrintCtrl] peel up: Curlayer: 28 Number: "13"
 [2022-05-31 14:54:32.671] [TRACE] [PrintCtrl] speed[0]: 300, distance[0]: 1600
