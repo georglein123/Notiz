@@ -1026,3 +1026,200 @@ A3D满版5个全颌面实心牙模
 [2022-05-31 14:54:13.857] [TRACE] Discard Led Eff:  "LE_UNCOVERED"
 ```
 
+
+
+
+
+A3D满版极端基牙
+
+90层图片
+
+
+
+```cassandra
+rk@ubuntu:~/cpp_ws/bin$ /home/rk/cpp_ws/bin/MValueCalculator 
+T: 11927
+S: 14007.5
+delta: 43.7249
+M: 305.99
+T: 11924
+S: 14036
+delta: 43.7179
+M: 306.04
+T: 11924
+S: 14036
+delta: 43.7179
+M: 306.04
+T: 11916
+S: 14007.5
+delta: 43.707
+M: 305.738
+T: 11916
+S: 14007.5
+delta: 43.707
+M: 305.738
+T: 11916
+S: 14007.5
+delta: 43.7031
+M: 305.766
+T: 10777
+S: 12846.4
+delta: 41.6395
+M: 276.666
+T: 10776
+S: 12846.4
+delta: 41.6387
+M: 276.637
+T: 10772
+S: 12846.4
+delta: 41.6317
+M: 276.546
+T: 10769
+S: 12846.4
+delta: 41.6217
+M: 276.51
+T: 10760
+S: 12846.4
+delta: 41.6055
+M: 276.309
+T: 10760
+S: 12846.4
+delta: 41.6055
+M: 276.309
+T: 10522
+S: 12413.5
+delta: 41.0661
+M: 270.165
+T: 10515
+S: 12495.8
+delta: 41.0534
+M: 270.307
+T: 10515
+S: 12495.8
+delta: 41.0534
+M: 270.307
+T: 10507
+S: 12537
+delta: 41.0359
+M: 270.296
+T: 10506
+S: 12537
+delta: 41.0341
+M: 270.273
+T: 10506
+S: 12537
+delta: 41.0341
+M: 270.273
+T: 9969
+S: 11363.4
+delta: 41.2139
+M: 246.837
+T: 9965
+S: 11388.2
+delta: 41.2069
+M: 246.836
+T: 9964
+S: 11366.3
+delta: 41.2138
+M: 246.682
+T: 9959
+S: 11385.5
+delta: 41.2034
+M: 246.65
+T: 9956
+S: 11348.7
+delta: 41.2087
+M: 246.386
+T: 9956
+S: 11348.7
+delta: 41.2087
+M: 246.386
+T: 9873
+S: 11900.8
+delta: 40.7469
+M: 248.37
+T: 9867
+S: 11925.5
+delta: 40.729
+M: 248.364
+T: 9861
+S: 11917.5
+delta: 40.7296
+M: 248.131
+T: 9859
+S: 11916.9
+delta: 40.7242
+M: 248.095
+T: 9857
+S: 11867.4
+delta: 40.7214
+M: 247.873
+T: 9852
+S: 11943.6
+delta: 40.7094
+M: 248.043
+[compute]top 5 m: 306.04
+[compute]top 5 m: 306.04
+[compute]top 5 m: 305.99
+[compute]top 5 m: 305.766
+[compute]top 5 m: 305.738
+[compute]MThre: 152.957
+[compute]greater than MThre m: 306.04
+[compute]greater than MThre m: 306.04
+[compute]greater than MThre m: 305.99
+[compute]greater than MThre m: 305.766
+[compute]greater than MThre m: 305.738
+[compute]greater than MThre m: 305.738
+[compute]greater than MThre m: 276.666
+[compute]greater than MThre m: 276.637
+[compute]greater than MThre m: 276.546
+[compute]greater than MThre m: 276.51
+[compute]greater than MThre m: 276.309
+[compute]greater than MThre m: 276.309
+[compute]greater than MThre m: 270.307
+[compute]greater than MThre m: 270.307
+[compute]greater than MThre m: 270.296
+[compute]greater than MThre m: 270.273
+[compute]greater than MThre m: 270.273
+[compute]greater than MThre m: 270.165
+[compute]greater than MThre m: 248.37
+[compute]greater than MThre m: 248.364
+[compute]greater than MThre m: 248.131
+[compute]greater than MThre m: 248.095
+[compute]greater than MThre m: 248.043
+[compute]greater than MThre m: 247.873
+[compute]greater than MThre m: 246.837
+[compute]greater than MThre m: 246.836
+[compute]greater than MThre m: 246.682
+[compute]greater than MThre m: 246.65
+[compute]greater than MThre m: 246.386
+[compute]greater than MThre m: 246.386
+[compute]nums of M > M_thre : 30
+[compute]nums of valid items : 30,  80% of the valid items : 24
+[compute]nums of M > M_thre  >  80% of the valid items  
+[compute]ENTER INTO CASE2
+T: 318146
+S: 1.42145e+06
+delta: 477.124
+M: 4826.8
+concat_M: 4826.8, M_hat: 8253.34
+[main]S000090_P1.png, final_M(without unit)=6540.07, final_M(with unit)=36.7879
+[main]well done!
+```
+
+
+
+
+
+309层
+
+![S000309_P1](E:\文档\GitHub\Notiz\A3D.assets\S000309_P1.png)
+
+
+
+310层：
+
+![S000310_P1](E:\文档\GitHub\Notiz\A3D.assets\S000310_P1.png)
+
+
+
