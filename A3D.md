@@ -1209,7 +1209,16 @@ concat_M: 4826.8, M_hat: 8253.34
 
 
 
+309层到310层M值突变，目前是通过将幅面中实体数量由30变成50个进行优化，但是本质原因由于sectionMidium到sectionLittle变化导致的
 
+```c++
+行 4937: 2022-06-09,12-19-18 546065788896  begin peel layer 309 percent: 110.61051940917969 Number: 13 up dis: Vector{ 1600 2400 3600 12900 12900 } down dis: Vector{ -12000 -12850 -12850 -12850 -12850 } 
+	行 4945: 2022-06-09,12-19-31 546065788896  begin wait layer 309 percent: 110.61051940917969 Number: 13 wait time: 9500 
+	行 4953: 2022-06-09,12-19-43 546065788896  begin peel layer 310 percent: 3.997638702392578 Number: 1 up dis: Vector{ 150 300 450 2900 2900 } down dis: Vector{ -1850 -2850 -2850 -2850 -2850 } 
+	行 4961: 2022-06-09,12-19-46 546065788896  begin wait layer 310 percent: 3.997638702392578 Number: 1 wait time: 100 
+	行 4969: 2022-06-09,12-19-48 546065788896  begin peel layer 311 percent: 3.997251272201538 Number: 1 up dis: Vector{ 150 300 450 2900 2900 } down dis: Vector{ -1850 -2850 -2850 -2850 -2850 } 
+	行 4977: 2022-06-09,12-19-51 546065788896  begin wait layer 311 percent: 3.997251272201538 Number: 1 wait time: 100 
+```
 
 309层
 
