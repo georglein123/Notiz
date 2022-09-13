@@ -158,3 +158,20 @@ A2D日志相关信息阅读：
 [2022-05-31 14:54:43.696] [TRACE] [Ddp442x] setLedOnOff
 ```
 
+
+
+
+
+远程操作打印机
+
+下载安装vnc viewer
+
+在xshell中连接好打印机后，输入`x11vnc`
+
+![image-20220712131917342](E:\文档\GitHub\Notiz\A2D电脑连接打印机获取日志等信息.assets\image-20220712131917342.png)
+
+然后打开vnc viewer，输入待连接打印机的ip地址，点击OK即可
+
+![image-20220712132018842](E:\文档\GitHub\Notiz\A2D电脑连接打印机获取日志等信息.assets\image-20220712132018842.png)
+
+每次必须首先在xshell中输入`x11vnc`，才能连接vnc
