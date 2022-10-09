@@ -38,15 +38,14 @@
 
    ![image-20220906112320327](ChairSide已发货设备自动均匀性校准整改方案流程.assets/image-20220906112320327.png)
 
-   - 手动mask即manual_mask获取路径：`/home/heygears/ultracore/bin`
-
    - 日志获取路径： `/home/heygears/ultracore/log`
 
-5. 将calibration.db中的手动PI数据导出为csv文件格式
+5. 将calibration.db中的手动PI数据及均匀性数据导出为csv文件格式
 
    - 对手动PI进行三次拟合，将指定列表中的电流I复制进入，求得此指定电流列表下的光强P；
+   - 将均匀性数据生成一张手动mask
 
-6. 将自动mask和手动mask一起放入pycharm程序中（auto_calibration_data_collecting文件夹下），获取两者中心灰度值，利用灰度比值法，获取自动mask下的IP数据；
+6. 将自动mask和手动mask一起放入pycharm程序中，获取两者中心灰度值，利用灰度比值法，获取自动mask下的IP数据；
 
 7. 使用脚本`cs_whole_process_data_collecting.py`提取日志中IG数据，将IG数据， IP数据和相机模组母光源数据复制到CS出货整改模板中，进行数据拟合得到GG参数；
 
