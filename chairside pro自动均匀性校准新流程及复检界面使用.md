@@ -20,6 +20,14 @@ blacklist 修改位置
 
 ![image-20220728200210686](E:\文档\GitHub\Notiz\chairside pro全流程数据获取.assets\image-20220728200210686.png)
 
+**chairside pro文件路径：**
+
+| 序号                                        | 文件名                     | 文件路径                         |
+| ------------------------------------------- | -------------------------- | -------------------------------- |
+| 1. 自动mask手动PI时采集的电流I和光强P离散值 | autoenergycalibparams.json | /home/heygears/.heygears/configs |
+| 2. 手动均匀性校准及光强校准数据             | energycalibparams.json     | /home/heygears/.heygears/configs |
+| 3. 自动均匀性校准拟合的GG参数               | hg_autocalib.db            | /home/heygears/.heygears/db      |
+
 
 
 | autoenergycalibparams.json | /home/heygears/.heygears/configs |
