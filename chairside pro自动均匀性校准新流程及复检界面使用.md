@@ -1,3 +1,5 @@
+
+
 blacklist 修改位置
 
 /home/heygears/app/release/plugin
@@ -35,3 +37,7 @@ blacklist 修改位置
 | energycalibparams.json     | /home/heygears/.heygears/configs |
 | cap_img.png                | /home/heygears/app/release       |
 | hg_autocalib.db            | /home/heygears/.heygears/db      |
+
+
+
+出现0005错误相机通讯异常时，可能是相机通讯接线没有接上

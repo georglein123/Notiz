@@ -368,7 +368,11 @@ chairside 自动均匀性校准新流程及复检界面使用
 
 
 
+CSP中的mainWindow若没有，也是放入.blacklist中
 
+`/home/heygears/app/release/plugin`
+
+![image-20221115142434899](new-chairside 自动均匀性校准新流程及复检界面使用.assets/image-20221115142434899.png)
 
 
 
