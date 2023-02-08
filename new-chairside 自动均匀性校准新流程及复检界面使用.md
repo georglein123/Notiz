@@ -467,25 +467,21 @@ CS——日志中关键字查看：
 
         `OnFitGG P-I`
 
-      - 离散数据：设备端光强P，灰度G，母光源光强P，灰度G
-
-        - `OnFitGG P-I`
-
-      - 拟合结果：设备端电流I、光强P
-
-        `PG_coeff =  QVector`
-
-        `PG4K_coeff =  QVector`
-
       - 离散数据：光强列表下设备端灰度、母光源灰度
 
         - `manPower_avgGray`
-        - `4[k|K]Power_avgGray`
-
-      - G-G的拟合结果
-
+  - `4[k|K]Power_avgGray`
+      
+- 拟合结果：设备端电流I、光强P
+      
+  `PG_coeff =  QVector`
+      
+  `PG4K_coeff =  QVector`
+      
+- G-G的拟合结果
+      
         - 拟合结果
-        - `GG_coeffs std::vector`
+  - `GG_coeffs std::vector`
 
 
 **母光源的GP函数无法在cs的日志中查看**
@@ -637,3 +633,6 @@ cs :  `gg_coeffs_list`——必须做了自动均匀性校准才会打印出该�
 
 
 
+CS\chairside 初装软件
+
+开机时，不断按F2，进入调试界面后，点击U盘初装，从U盘中导入软件

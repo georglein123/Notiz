@@ -6,7 +6,7 @@ CS——日志中关键字查看：
 
    1. 自动均匀性校准：
 
-      - 离散数据：电流I（此处电流I的值和 `自动mask手动PI` 中的电流值相同）、灰度avgGrey、newGrey、 LookUpPower
+      - 离散数据：电流I（手动校准中的电流列表中的电流）、灰度avgGrey、newGrey、 LookUpPower
         - 日志关键字`CollectPI`
       - 拟合结果：LookUpPower和电流I
         - 日志关键字`多项式系数:  QVector`
@@ -17,25 +17,21 @@ CS——日志中关键字查看：
 
         `OnFitGG P-I`
 
-      - 离散数据：设备端光强P，灰度G，母光源光强P，灰度G
-
-        - `OnFitGG P-I`
-
-      - 拟合结果：设备端电流I、光强P
-
-        `PG_coeff =  QVector`
-
-        `PG4K_coeff =  QVector`
-
-      - 离散数据：光强列表下设备端灰度、母光源灰度
+      - 离散数据：设备端光强，设备端灰度、母光源光强，母光源灰度
 
         - `manPower_avgGray`
-        - `4[k|K]Power_avgGray`
-
-      - G-G的拟合结果
-
+  - `4[k|K]Power_avgGray`
+      
+- 拟合结果：设备端电流I、光强P
+      
+  `PG_coeff =  QVector`
+      
+  `PG4K_coeff =  QVector`
+      
+- G-G的拟合结果
+      
         - 拟合结果
-        - `GG_coeffs std::vector`
+  - `GG_coeffs std::vector`
 
 **母光源的GP函数无法在cs的日志中查看**
 
