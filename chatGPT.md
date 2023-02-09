@@ -1,4 +1,6 @@
-chatGPT使用场景
+chatGPT
+
+## 使用场景
 
 1. 问答
 
@@ -555,3 +557,39 @@ Create interview questions.
 Create a list of 8 questions for my interview with a science fiction author:
 ```
 
+
+
+## 如何提问
+
+1. 提供一些例子指导
+
+例如
+
+```
+Suggest three names for a horse that is a superhero.
+```
+
+换成下方这个
+
+```
+Suggest three names for an animal that is a superhero.
+
+Animal: Cat
+Names: Captain Sharpclaw, Agent Fluffball, The Incredible Feline
+Animal: Dog
+Names: Ruff the Protector, Wonder Canine, Sir Barks-a-Lot
+Animal: Horse
+Names:
+```
+
+2. 调节temperature 参数，temperature参数[0,1]，在至0以上，可以在每次提交相同问题时获得不同回答，temperature越低，回答越精确稳定，temperature越高，回答越发散
+
+
+
+
+
+
+
+API
+
+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
