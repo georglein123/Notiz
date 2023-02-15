@@ -40,3 +40,17 @@ To use the JuicySMS API, you'll need to follow these steps:
       In summary, parsing the JSON response means extracting the data from the JSON format and making it usable by your program.
 
 Keep in mind that the specific steps and requirements for using the JuicySMS API may vary depending on the specific use case, so it's important to review the API documentation thoroughly and ensure that you are following best practices for API usage and security.
+
+
+
+
+
+google form 和 make结合使用
+
+![image-20230214215518288](API使用.assets/image-20230214215518288.png)
+
+Spreadsheet 下拉没有任何表格时，此时google form的response未创建好
+
+![image-20230214215802888](API使用.assets/image-20230214215802888.png)
+
+Responses 选项卡中创建一个spreadsheet
