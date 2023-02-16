@@ -55,3 +55,27 @@ Spreadsheet 下拉没有任何表格时，此时google form的response未创建�
 
 Responses 选项卡中创建一个spreadsheet
 
+<<<<<<< Updated upstream
+=======
+
+
+告诉chatgpt，如何使用alpaca
+
+![image-20230215203249215](API使用.assets/image-20230215203249215.png)
+
+
+
+![image-20230215203642833](API使用.assets/image-20230215203642833.png)
+
+
+
+Alpaca 
+
+api使用信息
+
+https://pypi.org/project/alpaca-trade-api/
+
+Account 信息
+
+https://alpaca.markets/docs/api-references/trading-api/account/
+>>>>>>> Stashed changes
