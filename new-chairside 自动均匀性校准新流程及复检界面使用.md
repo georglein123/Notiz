@@ -471,16 +471,17 @@ CS——日志中关键字查看：
 
         - `manPower_avgGray`
   - `4[k|K]Power_avgGray`
-      
+    
 - 拟合结果：设备端电流I、光强P
       
   `PG_coeff =  QVector`
       
   `PG4K_coeff =  QVector`
-      
+  
 - G-G的拟合结果
       
         - 拟合结果
+  
   - `GG_coeffs std::vector`
 
 
@@ -636,3 +637,11 @@ cs :  `gg_coeffs_list`——必须做了自动均匀性校准才会打印出该�
 CS\chairside 初装软件
 
 开机时，不断按F2，进入调试界面后，点击U盘初装，从U盘中导入软件
+
+
+
+CS后台查看软件版本号
+
+只能查看重启后的日志，日志路径`/home/heygears/ultracore/log`
+
+满10M的文件和第二天会顺接之前的，不会在首行打印软件版本号，只有重启的才会在首行打印版本号

@@ -53,6 +53,12 @@ sudo chmod -R 777
 
 
 
+CS设备上优盘路径为：/media/root/优盘名
+
+要获取root权限 
+
+sudo -i 或 sudo -s
+
 
 
 

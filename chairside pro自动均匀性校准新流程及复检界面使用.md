@@ -41,3 +41,11 @@ blacklist 修改位置
 
 
 出现0005错误相机通讯异常时，可能是相机通讯接线没有接上
+
+查看CSP软件版本号
+
+命令行进入`/home/heygears/app/release`
+
+然后`cat version`
+
+![image-20230224110614697](chairside pro自动均匀性校准新流程及复检界面使用.assets/image-20230224110614697.png)
