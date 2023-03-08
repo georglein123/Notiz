@@ -645,3 +645,24 @@ CS后台查看软件版本号
 只能查看重启后的日志，日志路径`/home/heygears/ultracore/log`
 
 满10M的文件和第二天会顺接之前的，不会在首行打印软件版本号，只有重启的才会在首行打印版本号
+
+
+
+CS设备编号：
+
+B01C2250186A9
+
+B：桌面级
+
+01：CSP；02：CS
+
+C：阶段期
+
+![img_v2_db1aa6e8-938c-472a-b1db-1de0d0735d8g](new-chairside 自动均匀性校准新流程及复检界面使用.assets/img_v2_db1aa6e8-938c-472a-b1db-1de0d0735d8g.jpg)
+
+
+
+![img_v2_02c1d982-916d-470c-b195-fd0ecc39188g](new-chairside 自动均匀性校准新流程及复检界面使用.assets/img_v2_02c1d982-916d-470c-b195-fd0ecc39188g.jpg)
+
+
+

@@ -49,3 +49,31 @@ blacklist 修改位置
 然后`cat version`
 
 ![image-20230224110614697](chairside pro自动均匀性校准新流程及复检界面使用.assets/image-20230224110614697.png)
+
+CSP设备编号：
+
+B01C2250186A9
+
+B：桌面级
+
+01：CSP；02：CS
+
+C：阶段期
+
+
+
+修改设备SN码
+
+路径：`/home/heygears/.heygears/registry`
+
+修改sys文件
+
+增加字段
+
+使用sudo vim，否则没有权限修改该文件
+
+`[product]`
+
+`sn=CSP20230306AB`
+
+![img_v2_ff4c193c-8fd1-457f-bc2d-c6e1a8032e3g](chairside pro自动均匀性校准新流程及复检界面使用.assets/img_v2_ff4c193c-8fd1-457f-bc2d-c6e1a8032e3g.jpg)
