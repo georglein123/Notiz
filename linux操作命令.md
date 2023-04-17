@@ -27,7 +27,7 @@ sed -e
 
 
 
-shell
+## shell
 
 shell 是一个编程环境，所以它具备变量、条件、循环和函数
 
@@ -44,6 +44,8 @@ missing:~$ date
 
 
 2. 在执行命令的同时向程序传递 *参数* ：
+
+`echo`：打印出传给echo的参数
 
 ```shell
 missing:~$ echo hello
@@ -92,3 +94,30 @@ missing:~$ /bin/echo $PATH
 missing:~$ /bin/echo hello
 ```
 
+
+
+查询程序的参数、输入输出的信息`man`
+
+```shell
+missing:~$ man ls
+```
+
+
+
+
+
+## Shell 脚本
+
+ bash 脚本
+
+赋值：`foo=bar`
+
+访问变量中存储的数值：`$foo`
+
+注：`foo = bar` （使用空格隔开）是不能正确工作的，因为解释器会调用程序`foo` 并将 `=` 和 `bar`作为参数，shell脚本中使用空格会起到分割参数的作用
+
+Bash中的字符串通过`'` 和 `"`分隔符来定义：
+
+- 以`'`定义的字符串为原义字符串，其中的变量不会被转义，
+
+- 而 `"`定义的字符串会将变量值进行替换。
