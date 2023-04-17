@@ -24,3 +24,71 @@ sed -i
 sed -e
 
 -e: expression， add the script to the commands to be executed
+
+
+
+shell
+
+shell 是一个编程环境，所以它具备变量、条件、循环和函数
+
+您当前所在的位置是 `~` (表示 "home")
+
+`$` 符号表示您现在的身份不是 root 用户
+
+1. 输入 *命令* ，命令最终会被 shell 解析
+
+```shell
+missing:~$ date
+```
+
+
+
+2. 在执行命令的同时向程序传递 *参数* ：
+
+```shell
+missing:~$ echo hello
+```
+
+
+
+ shell 基于空格分割命令并进行解析，然后执行第一个单词代表的程序，并将后续的单词作为程序可以访问的参数。
+
+如果您希望传递的参数中包含空格（例如一个名为 My Photos 的文件夹），您要么用使用单引号，双引号将其包裹起来，要么使用转义符号 `\` 进行处理（`My\ Photos`）
+
+如果你要求 shell 执行某个指令，但是该指令并不是 shell 所了解的编程关键字，那么它会去咨询 *环境变量* `$PATH`，它会列出当 shell 接到某条指令时，进行程序搜索的路径：
+
+*环境变量* `$PATH`，
+
+```shell
+missing:~$ echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+missing:~$ which echo
+/bin/echo
+missing:~$ /bin/echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+```
+
+shell 了解到需要执行 `echo` 这个程序，随后它便会在 `$PATH` 中搜索由 `:` 所分割的一系列目录，基于名字搜索该程序
+
+
+
+命令的具体路径
+
+```shell
+missing:~$ which echo
+/bin/echo
+```
+
+
+
+直接指定需要执行的程序的路径来执行该程序
+
+```shell
+missing:~$ /bin/echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+```
+
+```shell
+missing:~$ /bin/echo hello
+```
+

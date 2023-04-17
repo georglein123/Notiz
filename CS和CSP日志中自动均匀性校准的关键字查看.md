@@ -21,16 +21,17 @@ CS——日志中关键字查看：
 
         - `manPower_avgGray`
   - `4[k|K]Power_avgGray`
-      
+    
 - 拟合结果：设备端电流I、光强P
       
   `PG_coeff =  QVector`
       
   `PG4K_coeff =  QVector`
-      
+  
 - G-G的拟合结果
       
         - 拟合结果
+  
   - `GG_coeffs std::vector`
 
 **母光源的GP函数无法在cs的日志中查看**
@@ -73,25 +74,26 @@ CS——日志中关键字查看：
       - 离散数据：设备端光强P，灰度G，母光源光强P，灰度G
 
         - `CreatePI 995 P-I`
-
+        - `CreatePI 998 P-I`（CreatePI 998 P-I= 14.08 100）
+   
       - 拟合结果：设备端电流I、光强P
-
+   
         `PG_coeff =  QVector`
-
+   
         `PG4K_coeff =  QVector`
-
+   
       - 离散数据：光强列表下设备端灰度、母光源灰度
-
+   
         - `manPower_avgGray`
         - `4[k|K]Power_avgGray`
-
+   
       - G-G的拟合结果
-
+   
         - 拟合结果
         - `GG_coeffs std::vector`
-
+   
    3. 4K母光源的GP拟合函数可以在日志中查看
-
+   
    2022-08-05 16:20:05.022 [DEBUG] CvtGrayToPower 792 `fn_coeffs`= (QVariant(double, -6.89945e-06), QVariant(double, 0.00441767), QVariant(double, -0.604259), QVariant(double, 33.9182))
 
 
