@@ -82,6 +82,38 @@ ros2 node info <node_name>
 
 
 
+## rqt
+
+弹出rqt：`rqt`
+
+查看节点及其连接：`rqt_graph`
+
+Throughout this tutorial, we will use `rqt_graph` to visualize the changing nodes and topics, as well as the connections between them.
+
+The [turtlesim tutorial](https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html) tells you how to install rqt and all its plugins, including `rqt_graph`.
+
+To run rqt_graph, open a new terminal and enter the command:
+
+```
+rqt_graph
+```
+
+
+
+You can also open rqt_graph by opening `rqt` and selecting **Plugins** > **Introspection** > **Node Graph**.
+
+![../../../_images/rqt_graph.png](ROS2.assets/rqt_graph.png)
+
+You should see the above nodes and topic, as well as two actions around the periphery of the graph (let’s ignore those for now). If you hover your mouse over the topic in the center, you’ll see the color highlighting like in the image above.
+
+The graph is depicting how the `/turtlesim` node and the `/teleop_turtle` node are communicating with each other over a topic. The `/teleop_turtle` node is publishing data (the keystrokes you enter to move the turtle around) to the `/turtle1/cmd_vel` topic, and the `/turtlesim` node is subscribed to that topic to receive the data.
+
+The highlighting feature of rqt_graph is very helpful when examining more complex systems with many nodes and topics connected in many different ways.
+
+rqt_graph is a graphical introspection tool. Now we’ll look at some command line tools for introspecting topics.
+
+
+
 ## Topics
 
 ROS 2 breaks complex systems down into many modular nodes. Topics are a vital element of the ROS graph that act as a bus for nodes to exchange messages.
@@ -1163,3 +1195,310 @@ The terminal will return the message:
 
 
 Your turtle will follow the same path you entered while recording (though not 100% exactly; turtlesim is sensitive to small changes in the system’s timing).
+
+
+
+
+
+## colcon - collective construction
+
+`colcon` is a command line tool to improve the workflow of building, testing and using multiple software packages. It automates the process, handles the ordering and sets up the environment to use the packages.
+
+`colcon` is an iteration on the ROS build tools `catkin_make`, `catkin_make_isolated`, `catkin_tools` and `ament_tools`. 
+
+A ROS workspace is a directory with a particular structure. Commonly there is a `src` subdirectory. Inside that subdirectory is where the source code of ROS packages will be located. Typically the directory starts otherwise empty.
+
+colcon does out of source builds. By default it will create the following directories as peers of the `src` directory:
+
+- The `build` directory will be where intermediate files are stored. For each package a subfolder will be created in which e.g. CMake is being invoked.
+- The `install` directory is where each package will be installed to. By default each package will be installed into a separate subdirectory.
+- The `log` directory contains various logging information about each colcon invocation.
+
+
+
+underlay
+
+It is important that we have sourced the environment for an existing ROS 2 installation that will provide our workspace with the necessary build dependencies for the example packages. This is achieved by sourcing the setup script provided by a binary installation or a source installation, ie. another colcon workspace (see [Installation](https://docs.ros.org/en/humble/Installation.html)). We call this environment an **underlay**.
+
+
+
+overlay
+
+Our workspace, `ros2_ws`, will be an **overlay** on top of the existing ROS 2 installation. In general, it is recommended to use an overlay when you plan to iterate on a small number of packages, rather than putting all of your packages into the same workspace.
+
+
+
+## Workspace
+
+### 1. 创建工作空间
+
+ Creating a workspace
+
+
+
+### 2. 查看依赖
+
+在workspace的路径下：
+
+```
+rosdep install -i --from-path src --rosdistro humble -y
+```
+
+
+
+tree
+
+查看路径层次结构：`tree -L 3`（当前路径向下3层）
+
+
+
+### 3. 编译工作空间
+
+Build the workspace with colcon
+
+在workspace的路径下：
+
+```
+colcon build
+```
+
+Other useful arguments for `colcon build`:
+
+- `--packages-up-to` builds the package you want, plus all its dependencies, but not the whole workspace (saves time)
+- `--symlink-install` saves you from having to rebuild every time you tweak python scripts
+- `--event-handlers console_direct+` shows console output while building (can otherwise be found in the `log` directory)
+
+Once the build is finished, enter `ls` in the workspace root (`~/ros2_ws`) and you will see that colcon has created new directories:
+
+```
+build  install  log  src
+```
+
+
+
+The `install` directory is where your workspace’s setup files are, which you can use to source your overlay.
+
+
+
+###  4. sourcing the overlay
+
+要打开新的terminal
+
+Before sourcing the overlay, it is very important that you open a new terminal, separate from the one where you built the workspace. Sourcing an overlay in the same terminal where you built, or likewise building where an overlay is sourced, may create complex issues.
+
+In the new terminal, source your main ROS 2 environment as the “underlay”, so you can build the overlay “on top of” it:
+
+LinuxmacOSWindows
+
+```
+source /opt/ros/humble/setup.bash
+```
+
+
+
+Go into the root of your workspace:
+
+LinuxmacOSWindows
+
+```
+cd ~/ros2_ws
+```
+
+
+
+In the root, source your overlay:
+
+LinuxmacOSWindows
+
+```
+source install/local_setup.bash
+```
+
+
+
+Note
+
+Sourcing the `local_setup` of the overlay will only add the packages available in the overlay to your environment. `setup` sources the overlay as well as the underlay it was created in, allowing you to utilize both workspaces.
+
+So, sourcing your main ROS 2 installation’s `setup` and then the `ros2_ws` overlay’s `local_setup`, like you just did, is the same as just sourcing `ros2_ws`’s `setup`, because that includes the environment of its underlay.
+
+
+
+ your sourced main ROS 2 distro installed work as your underlay, and created an overlay by cloning and building packages in a new workspace. The overlay gets prepended to the path, and takes precedence over the underlay, as you saw with your modified turtlesim.
+
+
+
+### 5. 运行package下的节点
+
+Now you can run the `turtlesim` package from the overlay:
+
+```
+ros2 run turtlesim turtlesim_node
+```
+
+
+
+## Package
+
+### 含义：
+
+A package can be considered a container for your ROS 2 code. If you want to be able to install your code or share it with others, then you’ll need it organized in a package. With packages, you can release your ROS 2 work and allow others to build and use it easily.
+
+Package creation in ROS 2 uses ament as its build system and colcon as its build tool. You can create a package using either CMake or Python, which are officially supported, though other build types do exist.
+
+ament is a meta build system to improve building applications which are split into separate packages. It consists of two major parts:
+
+- a *build system* (e.g. CMake, Python setuptools) to configure, build, and install a single package
+- a *tool* to invoke the build of individual packages in their topological order
+
+The tool relies on meta information about the packages to determine their dependencies and their build type. This meta information is defined in a manifest file called `package.xml` which is specified in [REP 140](http://www.ros.org/reps/rep-0140.html).
+
+Each package is built separately with its own build system. In order to make the output of one package available to other packages each package can extend the environment in a way that downstream packages can find and use its artifacts and resources. If the resulting artifacts are installed into `/usr`, for example, it might not be necessary to alter the environment at all since these folders are commonly being searched by various tools.
+
+### 组成：
+
+ROS 2 Python and CMake packages each have their own minimum required contents:
+
+CMake
+
+- `package.xml` file containing meta information about the package
+- `CMakeLists.txt` file that describes how to build the code within the package
+
+The simplest possible package may have a file structure that looks like:
+
+CMake
+
+```
+my_package/
+     CMakeLists.txt
+     package.xml
+```
+
+
+
+Python
+
+- `package.xml` file containing meta information about the package
+- `setup.py` containing instructions for how to install the package
+- `setup.cfg` is required when a package has executables, so `ros2 run` can find them
+- `/<package_name>` - a directory with the same name as your package, used by ROS 2 tools to find your package, contains `__init__.py`
+
+The simplest possible package may have a file structure that looks like:
+
+Python
+
+```
+my_package/
+      setup.py
+      package.xml
+      resource/my_package
+```
+
+### 在workspace中的位置：
+
+A single workspace can contain as many packages as you want, each in their own folder. You can also have packages of different build types in one workspace (CMake, Python, etc.). You cannot have nested packages.
+
+Best practice is to have a `src` folder within your workspace, and to create your packages in there. This keeps the top level of the workspace “clean”.
+
+A trivial workspace might look like:
+
+```
+workspace_folder/
+    src/
+      package_1/
+          CMakeLists.txt
+          package.xml
+
+      package_2/
+          setup.py
+          package.xml
+          resource/package_2
+      ...
+      package_n/
+          CMakeLists.txt
+          package.xml
+```
+
+### 1. 创建package
+
+Make sure you are in the `src` folder before running the package creation command.
+
+在工作空间的`src`路径下
+
+The command syntax for creating a new package in ROS 2 is:
+
+CMake
+
+```
+ros2 pkg create --build-type ament_cmake <package_name>
+```
+
+
+
+For this tutorial, you will use the optional argument `--node-name` which creates a simple Hello World type executable in the package.
+
+Enter the following command in your terminal:
+
+CMake
+
+```
+ros2 pkg create --build-type ament_cmake --node-name my_node my_package
+```
+
+
+
+You will now have a new folder within your workspace’s `src` directory called `my_package`.
+
+### 2. 编译工作空间
+
+Return to the root of your workspace:
+
+在工作空间路径下
+
+Now you can build your packages:
+
+```
+colcon build
+```
+
+只编译指定的package
+
+To build only the `my_package` package next time, you can run:
+
+```
+colcon build --packages-select my_package
+```
+
+### 3. source the setup file
+
+To use your new package and executable, first open a new terminal and source your main ROS 2 installation.
+
+Then, from inside the `ros2_ws` directory, run the following command to source your workspace:
+
+LinuxmacOSWindows
+
+```
+source install/local_setup.bash
+```
+
+
+
+Now that your workspace has been added to your path, you will be able to use your new package’s executables.
+
+### 4. 运行package下的节点
+
+To run the executable you created using the `--node-name` argument during package creation, enter the command:
+
+```
+ros2 run my_package my_node
+```
+
+
+
+Which will return a message to your terminal:
+
+CMake
+
+```
+hello world my_package package
+```
