@@ -1502,3 +1502,496 @@ CMake
 ```
 hello world my_package package
 ```
+
+
+
+## publisher and subscriber
+
+### publisher:
+
+### 1. 创建package
+
+Open a new terminal and [source your ROS 2 installation](https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.html) so that `ros2` commands will work.
+
+Navigate into the `ros2_ws` directory created in a [previous tutorial](https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.html#new-directory).
+
+Recall that packages should be created in the `src` directory, not the root of the workspace. So, navigate into `ros2_ws/src`, and run the package creation command:
+
+```
+ros2 pkg create --build-type ament_cmake cpp_pubsub
+```
+
+### 2. 创建publisher节点
+
+
+
+```
+class MinimalPublisher : public rclcpp::Node // 从rclcpp::Node继承创建MinimalPublisher类
+```
+
+```
+public:
+  MinimalPublisher() // 构造函数
+  : Node("minimal_publisher"), count_(0) //构造函数的初始化列表（initializer list），用于初始化类内成员变量，将Node部分初始化为minimal_publisher， count_初始化为0
+  
+  {
+    publisher_ = this->create_publisher<std_msgs::msg::String>("topic", 10);
+    // this->create_publisher<std_msgs::msg::String>("topic", 10)是函数调用，用于创建
+    // Publisher对象，该对象可以在topic上发布消息，已最大为10的队列大小发布，std_msgs::msg::String
+    // 是模板变量，指定了publisher发布消息的类型
+    // create_publisher是rclcpp库中类Node的成员函数，
+    
+    
+    timer_ = this->create_wall_timer(
+    500ms, std::bind(&MinimalPublisher::timer_callback, this));
+    // std::bind(&MinimalPublisher::timer_callback, this)是
+    // callback函数，
+    //Once the timer object has been created, it runs in the //background and executes the callback function at the //specified interval. In this example, the timer_callback //function is executed every half second.
+    
+  }
+```
+
+### 3. 添加依赖
+
+Navigate one level back to the `ros2_ws/src/cpp_pubsub` directory, where the `CMakeLists.txt` and `package.xml` files have been created for you.
+
+Open `package.xml` with your text editor.
+
+As mentioned in the [previous tutorial](https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html), make sure to fill in the `<description>`, `<maintainer>` and `<license>` tags:
+
+```
+<description>Examples of minimal publisher/subscriber using rclcpp</description>
+<maintainer email="you@email.com">Your Name</maintainer>
+<license>Apache License 2.0</license>
+```
+
+
+
+Add a new line after the `ament_cmake` buildtool dependency and paste the following dependencies corresponding to your node’s include statements:
+
+```
+<depend>rclcpp</depend>
+<depend>std_msgs</depend>
+```
+
+
+
+This declares the package needs `rclcpp` and `std_msgs` when its code is built and executed.
+
+
+
+### 4. 修改CMakeLists.txt
+
+Now open the `CMakeLists.txt` file. Below the existing dependency `find_package(ament_cmake REQUIRED)`, add the lines:
+
+```
+find_package(rclcpp REQUIRED)
+find_package(std_msgs REQUIRED)
+```
+
+
+
+package中的可执行程序节点
+
+After that, add the executable and name it `talker` so you can run your node using `ros2 run`:
+
+```
+add_executable(talker src/publisher_member_function.cpp)
+ament_target_dependencies(talker rclcpp std_msgs)
+```
+
+
+
+Finally, add the `install(TARGETS...)` section so `ros2 run` can find your executable:
+
+```
+install(TARGETS
+  talker
+  DESTINATION lib/${PROJECT_NAME})
+```
+
+
+
+You can clean up your `CMakeLists.txt` by removing some unnecessary sections and comments, so it looks like this:
+
+```
+cmake_minimum_required(VERSION 3.5)
+project(cpp_pubsub)
+
+# Default to C++14
+if(NOT CMAKE_CXX_STANDARD)
+  set(CMAKE_CXX_STANDARD 14)
+endif()
+
+if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+  add_compile_options(-Wall -Wextra -Wpedantic)
+endif()
+
+find_package(ament_cmake REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(std_msgs REQUIRED)
+
+add_executable(talker src/publisher_member_function.cpp)
+ament_target_dependencies(talker rclcpp std_msgs)
+
+install(TARGETS
+  talker
+  DESTINATION lib/${PROJECT_NAME})
+
+ament_package()
+```
+
+
+
+You could build your package now, source the local setup files, and run it, but let’s create the subscriber node first so you can see the full system at work.
+
+### subscriber:
+
+### 1. 创建subscriber节点
+
+Return to `ros2_ws/src/cpp_pubsub/src` to create the next node.
+
+### 2. 添加依赖
+
+Since this node has the same dependencies as the publisher node, there’s nothing new to add to `package.xml`.
+
+### 3. 修改CMakeLists.txt
+
+Reopen `CMakeLists.txt` and add the executable and target for the subscriber node below the publisher’s entries.
+
+```
+add_executable(listener src/subscriber_member_function.cpp)
+ament_target_dependencies(listener rclcpp std_msgs)
+
+install(TARGETS
+  talker
+  listener
+  DESTINATION lib/${PROJECT_NAME})
+```
+
+
+
+Make sure to save the file, and then your pub/sub system should be ready.
+
+
+
+### 编译运行
+
+You likely already have the `rclcpp` and `std_msgs` packages installed as part of your ROS 2 system. It’s good practice to run `rosdep` in the root of your workspace (`ros2_ws`) to check for missing dependencies before building:
+
+LinuxmacOSWindows
+
+```
+rosdep install -i --from-path src --rosdistro humble -y
+```
+
+
+
+Still in the root of your workspace, `ros2_ws`, build your new package:
+
+LinuxmacOSWindows
+
+```
+colcon build --packages-select cpp_pubsub
+```
+
+
+
+Open a new terminal, navigate to `ros2_ws`, and source the setup files:
+
+Linux
+
+```
+. install/setup.bash
+```
+
+
+
+Now run the talker node:
+
+```
+ros2 run cpp_pubsub talker
+```
+
+
+
+Open another terminal, source the setup files from inside `ros2_ws` again, and then start the listener node:
+
+```
+ros2 run cpp_pubsub listener
+```
+
+
+
+## service and client
+
+### service
+
+### 1. 创建package
+
+Open a new terminal and [source your ROS 2 installation](https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.html) so that `ros2` commands will work.
+
+Navigate into the `ros2_ws` directory created in a [previous tutorial](https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.html#new-directory).
+
+Recall that packages should be created in the `src` directory, not the root of the workspace. Navigate into `ros2_ws/src` and create a new package:
+
+```
+ros2 pkg create --build-type ament_cmake cpp_srvcli --dependencies rclcpp example_interfaces
+```
+
+
+
+Your terminal will return a message verifying the creation of your package `cpp_srvcli` and all its necessary files and folders.
+
+The `--dependencies` argument will automatically add the necessary dependency lines to `package.xml` and `CMakeLists.txt`. `example_interfaces` is the package that includes [the .srv file](https://github.com/ros2/example_interfaces/blob/humble/srv/AddTwoInts.srv) you will need to structure your requests and responses:
+
+```
+int64 a
+int64 b
+---
+int64 sum
+```
+
+
+
+The first two lines are the parameters of the request, and below the dashes is the response.
+
+### 2. 创建service节点
+
+### 3. 添加依赖
+
+Because you used the `--dependencies` option during package creation, you don’t have to manually add dependencies to `package.xml` or `CMakeLists.txt`.
+
+As always, though, make sure to add the description, maintainer email and name, and license information to `package.xml`.
+
+```
+<description>C++ client server tutorial</description>
+<maintainer email="you@email.com">Your Name</maintainer>
+<license>Apache License 2.0</license>
+```
+
+### 4. 修改CMakeLists
+
+The `add_executable` macro generates an executable you can run using `ros2 run`. Add the following code block to `CMakeLists.txt` to create an executable named `server`:
+
+```
+add_executable(server src/add_two_ints_server.cpp)
+ament_target_dependencies(server rclcpp example_interfaces)
+```
+
+
+
+So `ros2 run` can find the executable, add the following lines to the end of the file, right before `ament_package()`:
+
+```
+install(TARGETS
+    server
+  DESTINATION lib/${PROJECT_NAME})
+```
+
+
+
+You could build your package now, source the local setup files, and run it, but let’s create the client node first so you can see the full system at work.
+
+### client
+
+### 1. 创建client节点
+
+### 2. 添加依赖
+
+### 3. 修改CMakeLists
+
+Return to `CMakeLists.txt` to add the executable and target for the new node. After removing some unnecessary boilerplate from the automatically generated file, your `CMakeLists.txt` should look like this:
+
+```
+cmake_minimum_required(VERSION 3.5)
+project(cpp_srvcli)
+
+find_package(ament_cmake REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(example_interfaces REQUIRED)
+
+add_executable(server src/add_two_ints_server.cpp)
+ament_target_dependencies(server rclcpp example_interfaces)
+
+add_executable(client src/add_two_ints_client.cpp)
+ament_target_dependencies(client rclcpp example_interfaces)
+
+install(TARGETS
+  server
+  client
+  DESTINATION lib/${PROJECT_NAME})
+
+ament_package()
+```
+
+### 编译运行
+
+It’s good practice to run `rosdep` in the root of your workspace (`ros2_ws`) to check for missing dependencies before building:
+
+LinuxmacOSWindows
+
+```
+rosdep install -i --from-path src --rosdistro humble -y
+```
+
+Navigate back to the root of your workspace, `ros2_ws`, and build your new package:
+
+```
+colcon build --packages-select py_srvcli
+```
+
+
+
+Open a new terminal, navigate to `ros2_ws`, and source the setup files:
+
+LinuxmacOSWindows
+
+```
+source install/setup.bash
+```
+
+
+
+Now run the service node:
+
+```
+ros2 run py_srvcli service
+```
+
+
+
+The node will wait for the client’s request.
+
+Open another terminal and source the setup files from inside `ros2_ws` again. Start the client node, followed by any two integers separated by a space:
+
+```
+ros2 run py_srvcli client 2 3
+```
+
+
+
+If you chose `2` and `3`, for example, the client would receive a response like this:
+
+```
+[INFO] [minimal_client_async]: Result of add_two_ints: for 2 + 3 = 5
+```
+
+
+
+Return to the terminal where your service node is running. You will see that it published log messages when it received the request:
+
+```
+[INFO] [minimal_service]: Incoming request
+a: 2 b: 3
+```
+
+
+
+## interface files(.msg 和 .srv)
+
+### 1. 创建package
+
+run the following command to create a new package:
+
+```
+ros2 pkg create --build-type ament_cmake tutorial_interfaces
+```
+
+
+
+`tutorial_interfaces` is the name of the new package. Note that it is, and can only be, a CMake package, but this doesn’t restrict in which type of packages you can use your messages and services. You can create your own custom interfaces in a CMake package, and then use it in a C++ or Python node, which will be covered in the last section.
+
+### 2. package中创建msg和srv文件夹
+
+The `.msg` and `.srv` files are required to be placed in directories called `msg` and `srv` respectively. Create the directories in `ros2_ws/src/tutorial_interfaces`:
+
+```
+mkdir msg srv
+```
+
+### 3. 创建定制的数据结构形式
+
+#### msg定义
+
+In the `tutorial_interfaces/msg` directory you just created, make a new file called `Num.msg` with one line of code declaring its data structure:
+
+```
+int64 num
+```
+
+
+
+This is a custom message that transfers a single 64-bit integer called `num`.
+
+Also in the `tutorial_interfaces/msg` directory you just created, make a new file called `Sphere.msg` with the following content:
+
+```
+geometry_msgs/Point center
+float64 radius
+```
+
+
+
+This custom message uses a message from another message package (`geometry_msgs/Point` in this case).
+
+
+
+#### srv定义
+
+Back in the `tutorial_interfaces/srv` directory you just created, make a new file called `AddThreeInts.srv` with the following request and response structure:
+
+```
+int64 a
+int64 b
+int64 c
+---
+int64 sum
+```
+
+
+
+This is your custom service that requests three integers named `a`, `b`, and `c`, and responds with an integer called `sum`.
+
+### 4. 修改CMakeLists
+
+To convert the interfaces you defined into language-specific code (like C++ and Python) so that they can be used in those languages, add the following lines to `CMakeLists.txt`:
+
+```
+find_package(geometry_msgs REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
+
+rosidl_generate_interfaces(${PROJECT_NAME}
+  "msg/Num.msg"
+  "msg/Sphere.msg"
+  "srv/AddThreeInts.srv"
+  DEPENDENCIES geometry_msgs # Add packages that above messages depend on, in this case geometry_msgs for Sphere.msg
+)
+```
+
+
+
+### 5. 修改package.xml
+
+Because the interfaces rely on `rosidl_default_generators` for generating language-specific code, you need to declare a build tool dependency on it. `rosidl_default_runtime` is a runtime or execution-stage dependency, needed to be able to use the interfaces later. The `rosidl_interface_packages` is the name of the dependency group that your package, `tutorial_interfaces`, should be associated with, declared using the `<member_of_group>` tag.
+
+Add the following lines within the `<package>` element of `package.xml`:
+
+```
+<depend>geometry_msgs</depend>
+<buildtool_depend>rosidl_default_generators</buildtool_depend>
+<exec_depend>rosidl_default_runtime</exec_depend>
+<member_of_group>rosidl_interface_packages</member_of_group>
+```
+
+
+
+### 6. 编译package
+
+Now that all the parts of your custom interfaces package are in place, you can build the package. In the root of your workspace (`~/ros2_ws`), run the following command:
+
+LinuxmacOSWindows
+
+```
+colcon build --packages-select tutorial_interfaces
+```
