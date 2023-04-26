@@ -1234,6 +1234,10 @@ Our workspace, `ros2_ws`, will be an **overlay** on top of the existing ROS 2 in
 
  Creating a workspace
 
+新建一个文件夹，例如`ws`，作为工作空间
+
+注：该工作空间内含有`src`文件夹，`src`文件夹中为一个个package文件夹
+
 
 
 ### 2. 查看依赖
@@ -1320,9 +1324,7 @@ Note
 
 Sourcing the `local_setup` of the overlay will only add the packages available in the overlay to your environment. `setup` sources the overlay as well as the underlay it was created in, allowing you to utilize both workspaces.
 
-So, sourcing your main ROS 2 installation’s `setup` and then the `ros2_ws` overlay’s `local_setup`, like you just did, is the same as just sourcing `ros2_ws`’s `setup`, because that includes the environment of its underlay.
-
-
+So, sourcing your main ROS 2 installation’s `setup` and then the `ros2_ws` overlay’s `local_setup`, like you just did, is the same as just sourcing `ros2_ws`’s `setup`, because that includes the environment of its underlay. 
 
  your sourced main ROS 2 distro installed work as your underlay, and created an overlay by cloning and building packages in a new workspace. The overlay gets prepended to the path, and takes precedence over the underlay, as you saw with your modified turtlesim.
 
