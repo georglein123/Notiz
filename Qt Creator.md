@@ -235,13 +235,19 @@ QDialog * dialog =
 
 点击OK后
 
-自动在类的头文件中添加槽函数声明
+自动跳转到功能定义部分
+
+在窗口对象名同名的类的源文件中自动添加功能函数
+
+![image-20230504203859730](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230504203859730.png)
+
+并且会自动在窗口对象名同名的类的头文件中添加槽函数声明
 
 ![image-20230504203800920](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230504203800920.png)
 
-以及在类的源文件中自动添加功能函数
 
-![image-20230504203859730](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230504203859730.png)
+
+
 
 
 
@@ -287,3 +293,164 @@ void helloDialog::on_pushButton_4_clicked()
 
 ```
 
+
+
+#### 消息对话框
+
+消息对话框QMessageBox类提供了一个模态的对话框来通知用户一些信息，或者向用户提出一个问题并且获取答案。
+
+##### 问题对话框
+
+![image-20230506134853278](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230506134853278.png)
+
+```c++
+void helloDialog::on_pushButton_9_clicked()
+{
+    int ret1 = QMessageBox::question(this, tr("problem dialog"), tr("do you know qt?"), QMessageBox::Yes,QMessageBox::No);
+    if(ret1 == QMessageBox::Yes) qDebug()<<tr("problem");
+
+}
+
+```
+
+该函数返回一个index值
+
+![image-20230506140306057](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230506140306057.png)
+
+
+
+
+
+##### 提示对话框
+
+![image-20230506134817979](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230506134817979.png)
+
+```c++
+    int ret2 = QMessageBox::information(this, tr("information dialog"), tr("Qt book"), QMessageBox::Ok);
+    if(ret2 == QMessageBox::Ok) qDebug()<<"information"<<endl;
+```
+
+
+
+##### 警告对话框
+
+##### 错误对话框
+
+##### 关于对话框
+
+
+
+#### 向导对话框
+
+1. 在窗口类的头文件中添加头文件`#include <QWizard>`
+2. 添加private类型函数声明
+
+![image-20230506163538015](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230506163538015.png)
+
+3. 在窗口类的源文件中对函数进行定义
+
+直接在头文件中添加源文件的定义
+
+![image-20230506164854654](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230506164854654.png)
+
+
+
+![image-20230506165002471](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230506165002471.png)
+
+```c++
+// 定义返回值为QWizardPage类对象的指针函数，该函数返回一个指向QWizardPage类的指针
+QWizardPage *helloDialog::createPage1()
+{
+    QWizardPage *page = new QWizardPage;
+    page->setTitle("introduction");
+    return page;
+}
+```
+
+4. 窗口界面添加按钮，并建立槽函数
+
+![image-20230506165441796](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230506165441796.png)
+
+```c++
+void helloDialog::on_pushButton_11_clicked()
+{
+    //基于this构建一个向导
+    QWizard wizard(this);
+    wizard.setWindowTitle(tr("guide dialog"));
+    wizard.addPage(createPage1());
+    wizard.addPage(createPage2());
+    wizard.exec();
+}
+```
+
+
+
+## 3.3 其他窗口部件
+
+### 3.3.1 QFrame类族
+
+QFrame类是带有边框的部件的基类
+
+Qt中凡是带有Abstract字样的类都是抽象基类
+
+抽象基类时不能直接使用的，但是可以继承该类实现自己的类，或者使用它提供的子类
+
+#### QLabel
+
+用于显示文本或图片
+
+##### 显示文本
+
+在窗口类的源文件的构造函数中：
+
+```c++
+    //设置字体
+    QFont font;
+    font.setFamily("华文行楷");
+    font.setBold(true);
+    font.setItalic(true);
+    ui->label->setFont(font);
+	
+	//设置字体太长时进行省略
+    QString string = tr("the title is too long, needs to be shorted");
+    QString str = ui->label->fontMetrics().elidedText(string, Qt::ElideRight, 180);
+    ui->label->setText(str);
+
+```
+
+##### 显示图片 (静态图)
+
+源文件中添加头文件 `#include <QPixmap>`
+
+设置label的属性
+
+`ui->label->setPixmap(QPixmap("/home/rk/Pictures/heygears.png"));`
+
+![image-20230510095736488](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230510095736488.png)
+
+![image-20230510111443552](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230510111443552.png)
+
+##### 显示图片（动态图）
+
+源文件中添加头文件 `#include <QMovie>`
+
+设置label的属性
+
+```c++
+    //添加动态图片
+    QMovie *movie = new QMovie("xx");
+    ui->label->setMovie(movie);
+    movie->start();
+```
+
+#### QLCDNumber
+
+拖动LCD Number部件到界面
+
+部件属性栏设置
+
+![image-20230510112437801](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230510112437801.png)
+
+
+
+![image-20230510112338984](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230510112338984.png)
