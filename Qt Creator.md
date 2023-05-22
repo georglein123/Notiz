@@ -10,31 +10,31 @@ Qt中每一个类都有一个与其同名的头文件
 
 
 
-![image-20230504202209955](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230504202209955.png)
+![image-20230504202209955](./Qt Creator.assets/image-20230504202209955-1684748221954-2.png)
 
 
 
-![image-20230504202431201](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230504202431201.png)
+![image-20230504202431201](./Qt Creator.assets/image-20230504202431201.png)
 
 
 
-![image-20230504202342147](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230504202342147.png)
+![image-20230504202342147](./Qt Creator.assets/image-20230504202342147.png)
 
 
 
-![image-20230504202026005](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230504202026005.png)
+![image-20230504202026005](./Qt Creator.assets/image-20230504202026005.png)
 
 
 
 完成后文件形式：
 
-![img_v2_429d8fb1-4d25-4f1d-8e8d-38bf6efd767g](C:\Users\Administrator\AppData\Roaming\LarkShell-ka-samhzo3j\sdk_storage\5287ca566b5f1745722e44551afcb588\resources\images\img_v2_429d8fb1-4d25-4f1d-8e8d-38bf6efd767g.jpg)
+![img_v2_429d8fb1-4d25-4f1d-8e8d-38bf6efd767g](./Qt Creator.assets/img_v2_429d8fb1-4d25-4f1d-8e8d-38bf6efd767g.jpg)
 
 工程名称是创建工程时设定的名称
 
 头文件和源文件的名称是创建工程时设定的类名
 
-![image-20230504202740357](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230504202740357.png)
+![image-20230504202740357](./Qt Creator.assets/image-20230504202740357.png)
 
 
 
@@ -54,25 +54,25 @@ Qt中每一个类都有一个与其同名的头文件
 
 新建空项目
 
-![image-20230504162213534](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230504162213534.png)
+![image-20230504162213534](./Qt Creator.assets/image-20230504162213534.png)
 
 
 
 在空项目中添加cpp文件
 
-![image-20230504162900361](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230504162900361.png)
+![image-20230504162900361](./Qt Creator.assets/image-20230504162900361.png)
 
 
 
 在空项目中添加ui文件
 
-![image-20230504163004451](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230504163004451.png)
+![image-20230504163004451](./Qt Creator.assets/image-20230504163004451.png)
 
-![image-20230504163050348](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230504163050348.png)
+![image-20230504163050348](./Qt Creator.assets/image-20230504163050348.png)
 
-![image-20230504163122562](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230504163122562.png)
+![image-20230504163122562](./Qt Creator.assets/image-20230504163122562.png)
 
-![image-20230504163149097](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230504163149097.png)
+![image-20230504163149097](./Qt Creator.assets/image-20230504163149097.png)
 
 添加ui文件后并进行界面设计，然后点击左下角锤子图标进行build，会在当前项目文件夹下生成debug文件夹，该文件夹内含有该ui的头文件
 
@@ -83,21 +83,21 @@ Qt中每一个类都有一个与其同名的头文件
 1. 新建一个空工程
 2. 加入类
 
-![image-20230504173031622](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230504173031622.png)
+![image-20230504173031622](./Qt Creator.assets/image-20230504173031622.png)
 
-![image-20230504173237875](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230504173237875.png)
+![image-20230504173237875](./Qt Creator.assets/image-20230504173237875.png)
 
 生成的头文件
 
-![image-20230504174010470](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230504174010470.png)
+![image-20230504174010470](./Qt Creator.assets/image-20230504174010470.png)
 
 生成的源文件
 
-![image-20230504174207771](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230504174207771.png)
+![image-20230504174207771](./Qt Creator.assets/image-20230504174207771.png)
 
 3. 加入main文件
 
-![image-20230504174709774](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230504174709774.png)
+![image-20230504174709774](./Qt Creator.assets/image-20230504174709774.png)
 
 3. 
 
@@ -227,11 +227,11 @@ QDialog * dialog =
 
 进入design页面，拖入指定的部件，然后右击，选择go to slot
 
-![image-20230504203414077](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230504203414077.png)
+![image-20230504203414077](./Qt Creator.assets/image-20230504203414077.png)
 
 
 
-![image-20230504203537146](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230504203537146.png)
+![image-20230504203537146](./Qt Creator.assets/image-20230504203537146.png)
 
 点击OK后
 
@@ -239,11 +239,11 @@ QDialog * dialog =
 
 在窗口对象名同名的类的源文件中自动添加功能函数
 
-![image-20230504203859730](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230504203859730.png)
+![image-20230504203859730](./Qt Creator.assets/image-20230504203859730.png)
 
 并且会自动在窗口对象名同名的类的头文件中添加槽函数声明
 
-![image-20230504203800920](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230504203800920.png)
+![image-20230504203800920](./Qt Creator.assets/image-20230504203800920.png)
 
 
 
@@ -301,7 +301,7 @@ void helloDialog::on_pushButton_4_clicked()
 
 ##### 问题对话框
 
-![image-20230506134853278](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230506134853278.png)
+![image-20230506134853278](./Qt Creator.assets/image-20230506134853278.png)
 
 ```c++
 void helloDialog::on_pushButton_9_clicked()
@@ -315,7 +315,7 @@ void helloDialog::on_pushButton_9_clicked()
 
 该函数返回一个index值
 
-![image-20230506140306057](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230506140306057.png)
+![image-20230506140306057](./Qt Creator.assets/image-20230506140306057.png)
 
 
 
@@ -323,7 +323,7 @@ void helloDialog::on_pushButton_9_clicked()
 
 ##### 提示对话框
 
-![image-20230506134817979](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230506134817979.png)
+![image-20230506134817979](./Qt Creator.assets/image-20230506134817979.png)
 
 ```c++
     int ret2 = QMessageBox::information(this, tr("information dialog"), tr("Qt book"), QMessageBox::Ok);
@@ -345,17 +345,17 @@ void helloDialog::on_pushButton_9_clicked()
 1. 在窗口类的头文件中添加头文件`#include <QWizard>`
 2. 添加private类型函数声明
 
-![image-20230506163538015](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230506163538015.png)
+![image-20230506163538015](./Qt Creator.assets/image-20230506163538015.png)
 
 3. 在窗口类的源文件中对函数进行定义
 
 直接在头文件中添加源文件的定义
 
-![image-20230506164854654](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230506164854654.png)
+![image-20230506164854654](./Qt Creator.assets/image-20230506164854654.png)
 
 
 
-![image-20230506165002471](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230506165002471.png)
+![image-20230506165002471](./Qt Creator.assets/image-20230506165002471.png)
 
 ```c++
 // 定义返回值为QWizardPage类对象的指针函数，该函数返回一个指向QWizardPage类的指针
@@ -369,7 +369,7 @@ QWizardPage *helloDialog::createPage1()
 
 4. 窗口界面添加按钮，并建立槽函数
 
-![image-20230506165441796](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230506165441796.png)
+![image-20230506165441796](./Qt Creator.assets/image-20230506165441796.png)
 
 ```c++
 void helloDialog::on_pushButton_11_clicked()
@@ -426,9 +426,9 @@ Qt中凡是带有Abstract字样的类都是抽象基类
 
 `ui->label->setPixmap(QPixmap("/home/rk/Pictures/heygears.png"));`
 
-![image-20230510095736488](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230510095736488.png)
+![image-20230510095736488](./Qt Creator.assets/image-20230510095736488.png)
 
-![image-20230510111443552](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230510111443552.png)
+![image-20230510111443552](./Qt Creator.assets/image-20230510111443552.png)
 
 ##### 显示图片（动态图）
 
@@ -449,11 +449,11 @@ Qt中凡是带有Abstract字样的类都是抽象基类
 
 部件属性栏设置
 
-![image-20230510112437801](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230510112437801.png)
+![image-20230510112437801](./Qt Creator.assets/image-20230510112437801.png)
 
 
 
-![image-20230510112338984](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230510112338984.png)
+![image-20230510112338984](./Qt Creator.assets/image-20230510112338984.png)
 
 #### QStackedWidget
 
@@ -463,11 +463,11 @@ Qt中凡是带有Abstract字样的类都是抽象基类
 
 效果：
 
-![image-20230511091112238](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230511091112238.png)
+![image-20230511091112238](./Qt Creator.assets/image-20230511091112238.png)
 
 信号和槽设计界面：
 
-![image-20230511091451410](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230511091451410.png)
+![image-20230511091451410](./Qt Creator.assets/image-20230511091451410.png)
 
  
 

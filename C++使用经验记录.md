@@ -6,10 +6,10 @@ C++使用经验记录
 
 定义一个全局变量
 
-![image-20230516121406650](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230516121406650.png)
+![image-20230516121406650](./C++使用经验记录.assets/image-20230516121406650-1684748271034-38.png)
 
 cpp文件
 
 标注的那段话又会被定义一次，变成局部变量
 
-![image-20230516121320930](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230516121320930.png)
+![image-20230516121320930](./C++使用经验记录.assets/image-20230516121320930.png)
