@@ -454,3 +454,22 @@ Qt中凡是带有Abstract字样的类都是抽象基类
 
 
 ![image-20230510112338984](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230510112338984.png)
+
+#### QStackedWidget
+
+该类提供一个部件栈，可以有多个界面，每个界面可以拥有自己的部件，不过每次只能显示一个界面。
+
+这个部件需使用QComboBox或QListWidget来选择它的各个页面
+
+效果：
+
+![image-20230511091112238](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230511091112238.png)
+
+信号和槽设计界面：
+
+![image-20230511091451410](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230511091451410.png)
+
+ 
+
+### 3.3.2 按钮部件
+
