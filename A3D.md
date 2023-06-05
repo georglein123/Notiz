@@ -2,17 +2,17 @@ A3D
 
 日志查看
 
-![image-20220517144829678](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220517144829678.png)
+![image-20220517144829678](A3D.assets/image-20220517144829678.png)
 
 传感器信息：
 
-![image-20220530140649738](E:\文档\GitHub\Notiz\A3D.assets\image-20220530140649738.png)
+![image-20220530140649738](A3D.assets/image-20220530140649738-1685515849147-2.png)
 
 
 
 设置模拟打印：
 
-![image-20220606111135379](E:\文档\GitHub\Notiz\A3D.assets\image-20220606111135379.png)
+![image-20220606111135379](A3D.assets/image-20220606111135379-1685515849147-3.png)
 
 从主目录中进入指定路径：`cd /usr/local/ultracore/`
 
@@ -32,7 +32,7 @@ A3D上打印出现的问题：
 
 - 出现较小截面导致幅面内实体被淘汰出去后无实体时，此时M值赋为0，没有进入工艺包对应段；
 
-![image-20220518100033416](E:\文档\GitHub\Notiz\A3D.assets\image-20220518100033416.png)
+![image-20220518100033416](A3D.assets/image-20220518100033416-1685515849147-6.png)
 
 
 
@@ -84,7 +84,7 @@ A3D上打印出现的问题：
 
 单独运行第305层图片
 
-![S000305_P1](E:\文档\GitHub\Notiz\A3D.assets\S000305_P1.png)
+![S000305_P1](A3D.assets/S000305_P1-1685515849147-4.png)
 
 ```
 [extractItemInfo]VALID_ITEM_EMPTY
@@ -146,7 +146,7 @@ A3D上打印出现的问题：
 
 224层：进入路线2，类似多个小基牙情况，计算的M值偏大
 
-![S000224_P1](E:\文档\GitHub\Notiz\A3D.assets\S000224_P1.png)
+![S000224_P1](A3D.assets/S000224_P1-1685515849147-5.png)
 
 ```c++
 T: 41556
@@ -233,7 +233,7 @@ concat_M: 5703.77, M_hat: 10805.1
 
 225层：进入路线1，多个实体，计算的M值偏小
 
-![S000225_P1](E:\文档\GitHub\Notiz\A3D.assets\S000225_P1.png)
+![S000225_P1](A3D.assets/S000225_P1-1685515849147-8.png)
 
 ```c++
 T: 42119
@@ -395,7 +395,7 @@ X10=0.362469
 
 - 打印全幅面底板进入路线1无法退出：
 
-![S000014_P1](E:\文档\GitHub\Notiz\A3D.assets\S000014_P1.png)
+![S000014_P1](A3D.assets/S000014_P1-1685515849147-7.png)
 
 ```
 T: 2.58914e+06
@@ -455,7 +455,7 @@ terminate called after throwing an instance of 'std::out_of_range'
 
 area_percent 换成M值 M value:
 
-![image-20220601091951748](E:\文档\GitHub\Notiz\A3D.assets\image-20220601091951748.png)
+![image-20220601091951748](A3D.assets/image-20220601091951748-1685515849147-9.png)
 
 
 
@@ -1222,13 +1222,13 @@ concat_M: 4826.8, M_hat: 8253.34
 
 309层
 
-![S000309_P1](E:\文档\GitHub\Notiz\A3D.assets\S000309_P1.png)
+![S000309_P1](A3D.assets/S000309_P1-1685515849147-10.png)
 
 
 
 310层：
 
-![S000310_P1](E:\文档\GitHub\Notiz\A3D.assets\S000310_P1.png)
+![S000310_P1](A3D.assets/S000310_P1-1685515849147-11.png)
 
 
 
