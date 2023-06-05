@@ -473,3 +473,11 @@ Qt中凡是带有Abstract字样的类都是抽象基类
 
 ### 3.3.2 按钮部件
 
+1. QPushButton
+2. QCheckBox, QRadioButton和QGroupBox
+
+QCheckBox：可以选择多项
+
+QRadioButton：只能选择一项
+
+![image-20230531151008165](Qt Creator.assets/image-20230531151008165.png)
