@@ -266,15 +266,3 @@ HEAD：指代上一次提交的commit
 
 
 
-查看远端的更新
-
-git fetch origin
-
-查看有哪些更改
-
-git diff origin/master
-
-确认可以即可合并
-
-*git merge origin/master* 
-
