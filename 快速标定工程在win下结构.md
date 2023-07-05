@@ -156,3 +156,161 @@ Invoke(Topics::Calibration, QVariant::fromValue(req))
 
 `<CalibParam>`表示`msg.data.value<CalibParam>()`是`CalibParam`类型，
 
+
+
+以标定按钮为例
+
+源文件中定义Controller类的成员函数on_calib_clicked()
+
+1. 类名大写；
+2. 类的成员函数，该函数前指名类的作用域为Controller；
+3. 函数返回值为void；
+4. 槽函数的形式on_xxx_clicked()：xxx名的按钮按下后，触发该槽函数
+
+```c++
+void Controller::on_calib_clicked()
+{
+	//将ui类指针的成员calib设置为disabled，表示该calib按钮不可用
+    ui->calib->setDisabled(true);
+    //发射信号startCalib()，调用信号对应的槽函数
+    emit startCalib();
+    //生成的label中设置文字
+    mLabel->setText(" Calibrating, please waiting...");
+    //将对话框展示出来
+    mDialog->show();
+}
+```
+
+头文件中声明槽函数
+
+```c++
+private slots:
+    void on_calib_clicked();
+```
+
+头文件中声明信号
+
+```c++
+signals:
+    void startCalib();
+```
+
+
+
+ControlNode::Init()中建立信号与槽关联
+
+```c++
+void ControlNode::Init()
+{
+	//建立信号与槽的连接
+    connect(controller.get(), &Controller::startCalib, this, &ControlNode::startCalib, Qt::QueuedConnection);
+}
+
+```
+
+
+
+```c++
+void ControlNode::startCalib()
+{
+    QtConcurrent::run(&mPool, [&]()->void{
+        auto border_img = mBorderImg;
+
+        std::unique_lock<std::mutex> lock(mLock);
+        auto calib_img = mFrame;
+        lock.unlock();
+
+        cv::imwrite(tmpDir.filePath("calib.bmp").toStdString(), calib_img);
+
+        bool isCalib = true;
+        mCalibRes = calib(border_img, calib_img, isCalib);
+        emit calibFinishSig(!mCalibRes.image.empty());
+    });
+}
+```
+
+————————完成`mCalibRes = calib(border_img, calib_img, isCalib);`——————该行代码功能的过程
+
+```c++
+CalibRes ControlNode::calib(const cv::Mat &border, const cv::Mat &calibImg, bool mode)
+{
+    CalibParam req;
+    req.border_img = border;
+    req.calib_img = calibImg;
+    req.mode = mode;
+
+    return Invoke(Topics::Calibration, QVariant::fromValue(req)).value<CalibRes>();
+}
+```
+
+模块间的通讯方式：同步
+
+```c++
+void Calibration::Init()
+{
+    AddInvoketion(Topics::Calibration, &Calibration::onCalib, this);
+}
+```
+
+
+
+```c++
+QVariant Calibration::onCalib(const ultrabus::Message &msg)
+{
+    auto req = msg.data.value<CalibParam>();
+
+    return QVariant::fromValue(calib(req.border_img, req.calib_img, req.mode));
+}
+```
+
+
+
+```c++
+CalibRes Calibration::calib(const cv::Mat &border, const cv::Mat &calib, bool mode)
+{
+    CalibRes res;
+
+    //auto border = cv::imread("D:\\border.bmp", cv::IMREAD_GRAYSCALE);
+    //auto calib = cv::imread("D:\\calib.bmp", cv::IMREAD_GRAYSCALE);
+
+    cv::Mat dev = calcDeviation(calib, border);
+    res.dev = dev.clone();
+
+    if(mode)
+    {
+        auto data = calcMapXY(dev / cb.mm_pixel);
+
+        auto image = undistort(cb.image, data.mapx, data.mapy);
+        res.image = image.clone();
+
+        cv::imwrite("D:\\srcImage.png", cb.image);
+        cv::imwrite("D:\\unDistImage.png", image);
+    }
+
+    return res;
+}
+```
+
+——————————————————————————
+
+
+
+```c++
+void ControlNode::Init()
+{
+    connect(this, &ControlNode::calibFinishSig, controller.get(), &Controller::onCalibFinish, Qt::QueuedConnection);
+}
+```
+
+标定完成后文字显示
+
+```c++
+void Controller::onCalibFinish(bool status)
+{
+    ui->calib->setDisabled(false);
+    QString calibRes = status ? "success" : "failed";
+    mDialog->close();
+    QMessageBox::about(this, "Info", QString(" calibration %1").arg(calibRes));
+}
+```
+
