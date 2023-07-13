@@ -26,3 +26,9 @@ hist = cv.calcHist([gray], [0], None, [256], [0,256])
 
 
 但如果你想从不同的数字开始计数，你可以向`enumerate`提供一个可选的第二个参数。例如，`enumerate(list1, 1)`将从1开始计数。
+
+
+
+三次样条插值
+
+[样条插值(Spline Interpolation)-云社区-华为云 (huaweicloud.com)](https://bbs.huaweicloud.com/blogs/264151)
