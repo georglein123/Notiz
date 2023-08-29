@@ -84,10 +84,49 @@ git diff hash1 hash2 --stat ：会列出有差异的文件
 
 要查看文件具体差异点
 
-git diff hash1 hash2 文件名
+git diff hash1 hash2 
 
 
 
-650a532874911fe4efb8195e240a57ad3b9b0a4b
+将远程分支拉到本地上，并到该分支上：
 
-0c7df24c15e616464966529496cb5e7450868ee1
+`git checkout -b serverfix origin/serverfix`
+
+例如：使用git clone将某个仓库克隆到本地了，然而这个仓库只是所有分支中的一个分支，此时可以使用上面命令拉取其他分支代码
+
+使用clone将master分支拉到本地上了，但是需要另外一个分支r818，则可以使用
+
+`git checkout -b r818 origin/r818`
+
+
+
+
+
+从远程仓库拉取某个版本，及其子模块
+
+```
+heygears@heygears-ubuntu:~/tools/boost$ git status 
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+heygears@heygears-ubuntu:~/tools/boost$ git branch 
+* master
+heygears@heygears-ubuntu:~/tools/boost$ git checkout 
+
+Display all 205 possibilities? (y or n)
+
+heygears@heygears-ubuntu:~/tools/boost$ git checkout boost-1.78.0
+
+heygears@heygears-ubuntu:~/tools/boost$ 
+
+heygears@heygears-ubuntu:~/tools/boost$ git submodule init 
+
+heygears@heygears-ubuntu:~/tools/boost$ git submodule update 
+```
+
+
+
+从某一个分支的基础上创建新分支
+
+![image-20230822145923776](git总结.assets/image-20230822145923776.png)

@@ -28,3 +28,6 @@ QVariant::fromValue(s)，将某类型的值包装成QVariant类型，
 
 ```
 
+编译时核数设置
+
+![image-20230803174457809](项目中相关的Qt知识.assets/image-20230803174457809.png)
