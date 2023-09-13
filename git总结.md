@@ -130,3 +130,29 @@ heygears@heygears-ubuntu:~/tools/boost$ git submodule update
 从某一个分支的基础上创建新分支
 
 ![image-20230822145923776](git总结.assets/image-20230822145923776.png)
+
+
+
+将本地分支与远程分支建立联系
+
+在使用Git进行版本控制时，如果你看到这样的错误信息“fatal: The current branch master has no upstream branch”，这意味着你的本地`master`分支并没有与远程仓库的任何分支建立“上游”关联。
+
+这里“上游”指的是你从哪个远程仓库的哪个分支获取（pull）或推送（push）代码。当你尝试对一个没有设置上游分支的本地分支执行`git push`或`git pull`时，Git不会知道应该与哪个远程分支同步，因此会出现这样的错误。
+
+解决方法：
+
+1. **手动设置上游分支**：你可以使用以下命令手动设置上游分支。
+    ```bash
+    git push --set-upstream origin master
+    ```
+    这里，`origin`是远程仓库的别名（通常默认为`origin`），`master`是你的本地分支名。这样做之后，你的本地`master`分支就会与远程仓库的`master`分支建立关联。
+
+2. **自动设置上游分支**：如果你希望Git自动为没有上游分支的本地分支设置一个同名的上游分支，你可以更改Git配置。运行以下命令：
+    ```bash
+    git config --global push.default matching
+    ```
+    或者，如果你只想为当前仓库设置，去掉`--global`选项即可。
+
+更多信息，你可以参考`git help config`来了解`push.default`或其他相关配置选项。
+
+注意：请确认你的远程仓库别名是否确实为`origin`，如果不是，需要将上述命令中的`origin`替换为实际的远程仓库别名。你可以通过`git remote -v`命令来查看所有远程仓库及其别名。
