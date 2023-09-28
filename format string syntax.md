@@ -192,3 +192,30 @@ print(formatted_value) # 输出: "0.0"
 
 这个选项可以用在你想避免在你的输出中出现负零的情况时，保持输出的美观和一致。
 
+
+
+template strings
+
+模板字符串提供了更简单的字符串替换方法，这在PEP 292中有详细描述。模板字符串的一个主要用例是用于国际化（i18n），因为在这种情境下，更简单的语法和功能使其比Python中其他内置的字符串格式化工具更易于翻译。
+
+例如，flufl.i18n包就是建立在模板字符串基础上的用于国际化的库。
+
+简单来说，模板字符串允许你创建一个有特定语法的字符串，这可以让你在之后方便地通过提供相应的值来替换模板中的某些部分。这对于需要多种语言支持的应用程序来说特别有用，因为它可以让你轻松地将特定的字符串翻译成多种语言，而不改变代码的其他部分。
+
+基于`$`替换
+
+- `$$`转义字符，用一个`$`代替
+- `$identifier`命名一个占位符，用于和`identifier`的键的值做对应匹配，`"identifier"`被限制为大小写不敏感的ASCII字母数字字符（包括下划线），并以下划线或字母开头，`$`后的第一个非标识符字母终止该占位标志。
+- `${identifier}`等价于`$identifier`
+
+class string.Template(template)： 构造函数使用template string作为唯一参数
+
+- **substitute**(*mapping={}*, */*, ***kwds*)
+
+  执行template substitution，返回一个新字符串，mapping是一个字典类似的对象，其中的key和template中的placeholder对应，这样就可以使用key对应的value替换placeholder中的值。或者，也可以提供关键字参数，其中关键字就是placeholder
+
+- **safe_substitute**(*mapping={}*, */*, ***kwds*)
+
+  类似substitute，但是mapping中没有key和placeholder对应时，不会报错，而是会将placeholder原样显示出来，并且，任何形式出现的`$`都会原样显示出来
+
+  
